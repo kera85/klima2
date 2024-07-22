@@ -38,6 +38,13 @@
             background-color: #ffffff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 10px 30px;
+            position: fixed;
+            width: calc(100% - 60px); /* Odjęcie marginesów od szerokości */
+            top: 30px; /* Odstęp od górnej krawędzi */
+            left: 30px; /* Odstęp od lewej krawędzi */
+            right: 30px; /* Odstęp od prawej krawędzi */
+            z-index: 1000;
+            border-radius: 10px; /* Zaokrąglenie krawędzi */
         }
         .navbar-brand img {
             width: 50px;
@@ -53,7 +60,7 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#">
             <img src="images/logo.png" alt="Logo">
             Air Pro

@@ -23,6 +23,7 @@
         .hero-content {
             max-width: 600px;
             margin-left: 10%; /* Adjust this value to control the left margin */
+            margin-top: 100px; /* Adjust this value to control the top margin */
         }
         .hero-content h2 {
             font-size: 2.5rem;
@@ -39,6 +40,13 @@
             background-color: #ffffff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 10px 30px;
+            position: fixed;
+            width: calc(100% - 60px); /* Odjęcie marginesów od szerokości */
+            top: 30px; /* Odstęp od górnej krawędzi */
+            left: 30px; /* Odstęp od lewej krawędzi */
+            right: 30px; /* Odstęp od prawej krawędzi */
+            z-index: 1000;
+            border-radius: 10px; /* Zaokrąglenie krawędzi */
         }
         .navbar-brand img {
             width: 50px;
@@ -69,25 +77,25 @@
             text-decoration: underline;
         }
         .contact-form {
-            max-width: 600px;
+            max-width: 400px; /* Zmniejszenie szerokości formularza */
             background: rgba(255, 255, 255, 0.9);
             padding: 20px;
             border-radius: 10px;
         }
         .contact-form .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 15px; /* Zmniejszenie odstępu między polami formularza */
         }
         .contact-form .form-control {
-            height: 45px;
+            height: 40px; /* Zmniejszenie wysokości pól formularza */
             border-radius: 0;
         }
         .contact-form textarea {
-            height: 150px;
+            height: 120px; /* Zmniejszenie wysokości pola tekstowego */
             border-radius: 0;
         }
         .contact-form .btn {
             width: 100%;
-            height: 45px;
+            height: 40px; /* Zmniejszenie wysokości przycisku */
             border-radius: 0;
         }
         .form-check-label {
@@ -97,7 +105,7 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="index.html">
             <img src="images/logo.png" alt="Logo">
             Air Pro
@@ -118,13 +126,11 @@
     <div class="hero">
         <div class="hero-content">
             <h2>Kontakt z nami</h2>
-            <p>Szukasz porady? Jesteśmy tutaj, aby pomóc Ci wybrać najlepsze rozwiązanie. Skontaktuj się z nami, a odpowiemy na wszystkie Twoje pytania.</p>
+            <p>Szukasz porady? Jesteśmy tutaj, aby pomóc Ci wybrać najlepsze rozwiązanie.</p>
             <div class="contact-info">
-                <img src="images/logo.png" alt="Logo">
                 <p>UL. Przykładowa 123, 00-001 Miasto</p>
                 <p><a href="mailto:kontakt@przyklad.com">kontakt@przyklad.com</a></p>
                 <p>+48 123-456-789 | +48 987-654-321</p>
-                <p><a href="https://facebook.com/przyklad">facebook.com/przyklad</a></p>
             </div>
             <div class="contact-form">
                 <form action="https://formspree.io/f/xeojqbwn" method="POST">
