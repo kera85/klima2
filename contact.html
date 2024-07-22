@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Chłodzimy Grzejemy</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .hero {
+            background: url('images/image4.png') no-repeat center top;
+            background-size: cover;
+            min-height: 100vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            text-align: left;
+        }
+        .hero-content {
+            max-width: 600px;
+            margin-left: 10%; /* Adjust this value to control the left margin */
+        }
+        .hero-content h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .hero-content .btn {
+            margin-right: 10px;
+        }
+        .navbar {
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 10px 30px;
+        }
+        .navbar-brand img {
+            width: 50px;
+        }
+        .navbar-nav .nav-link {
+            color: #333 !important;
+            font-weight: bold;
+        }
+        .navbar-nav .nav-link.active {
+            color: #007bff !important;
+        }
+        .contact-info {
+            color: white;
+            margin-bottom: 20px;
+        }
+        .contact-info img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        .contact-info p {
+            margin: 0;
+        }
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .contact-form {
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+        .contact-form .form-control {
+            height: 45px;
+            border-radius: 0;
+        }
+        .contact-form textarea {
+            height: 150px;
+            border-radius: 0;
+        }
+        .contact-form .btn {
+            width: 100%;
+            height: 45px;
+            border-radius: 0;
+        }
+        .form-check-label {
+            color: #333; /* Adjust this value to make the text darker */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="Logo">
+            CHŁODZIMYGRZEJEMY
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Strona główna</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">O nas</a></li>
+                <li class="nav-item"><a class="nav-link active" href="contact.html">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h2>Kontakt z nami</h2>
+            <p>Szukasz porady? Jesteśmy tutaj, aby pomóc Ci wybrać najlepsze rozwiązanie. Skontaktuj się z nami, a odpowiemy na wszystkie Twoje pytania.</p>
+            <div class="contact-info">
+                <img src="images/logo.png" alt="Logo">
+                <p>UL. Przykładowa 123, 00-001 Miasto</p>
+                <p><a href="mailto:kontakt@przyklad.com">kontakt@przyklad.com</a></p>
+                <p>+48 123-456-789 | +48 987-654-321</p>
+                <p><a href="https://facebook.com/przyklad">facebook.com/przyklad</a></p>
+            </div>
+            <div class="contact-form">
+                <form action="https://formspree.io/f/xeojqbwn" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" class="form-control" placeholder="Imię i Nazwisko" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control" placeholder="Adres e-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" class="form-control" placeholder="Temat" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" class="form-control" placeholder="Twoje zapytanie" required></textarea>
+                    </div>
+                    <div class="form-group form-check text-left">
+                        <input type="checkbox" class="form-check-input" id="consentCheck" required>
+                        <label class="form-check-label" for="consentCheck">Wyrażam zgodę na otrzymywanie drogą elektroniczną na wskazany przeze mnie adres e-mail informacji dotyczących świadczonych przez Administratora usług. Zgoda może zostać cofnięta w każdym czasie.*</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Wyślij wiadomość</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
