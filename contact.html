@@ -15,6 +15,7 @@
             --hero-paragraph-font-size: 2vw; /* Rozmiar czcionki paragrafu w sekcji hero */
             --navbar-padding-horizontal: 10vw; /* Poziomy padding paska nawigacyjnego */
             --navbar-border-radius: 10px; /* Zaokrąglenie paska nawigacyjnego */
+            --navbar-margin-top: 20px; /* Margines górny paska nawigacyjnego */
         }
 
         body {
@@ -60,7 +61,7 @@
             padding: 10px var(--navbar-padding-horizontal); /* Ustawienie poziomego paddingu paska nawigacyjnego */
             position: fixed;
             width: calc(100% - 2 * var(--navbar-padding-horizontal)); /* Ustawienie szerokości paska nawigacyjnego */
-            top: 0;
+            top: var(--navbar-margin-top); /* Oddalenie paska nawigacyjnego od górnej krawędzi */
             left: var(--navbar-padding-horizontal); /* Ustawienie lewego odstępu */
             z-index: 1000;
             height: var(--navbar-height); /* Ustawienie wysokości paska nawigacyjnego */
