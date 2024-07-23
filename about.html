@@ -9,6 +9,7 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
+            font-size: 1.1rem; /* Powiększenie czcionki */
         }
         .hero {
             padding: 0;
@@ -24,34 +25,57 @@
             padding: 60px 20px;
         }
         .content h2 {
-            font-size: 2.5rem;
+            font-size: 2.7rem; /* Powiększenie czcionki */
             font-weight: bold;
             margin-bottom: 10px;
         }
         .content h3 {
-            font-size: 2rem;
+            font-size: 2.2rem; /* Powiększenie czcionki */
             font-weight: bold;
             margin-bottom: 20px;
         }
+        .content h3 span {
+            color: #007bff; /* Niebieski kolor dla napisu "Poznaj nasz zespół!" */
+        }
         .content p {
-            font-size: 1.2rem;
+            font-size: 1.3rem; /* Powiększenie czcionki */
             margin-bottom: 10px;
             max-width: 500px;
         }
         .navbar {
             background-color: #ffffff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 10px 30px;
+            padding: 10px 300px; /* Zwiększenie szerokości paska nawigacyjnego */
             position: fixed;
-            width: calc(100% - 60px); /* Odjęcie marginesów od szerokości */
+            width: calc(100% - 600px); /* Odjęcie marginesów od szerokości */
             top: 30px; /* Odstęp od górnej krawędzi */
-            left: 30px; /* Odstęp od lewej krawędzi */
-            right: 30px; /* Odstęp od prawej krawędzi */
+            left: 300px; /* Zwiększony odstęp od lewej krawędzi */
+            right: 300px; /* Zwiększony odstęp od prawej krawędzi */
             z-index: 1000;
             border-radius: 10px; /* Zaokrąglenie krawędzi */
+            overflow: hidden; /* Dodane do ukrycia wystającego obrazu */
         }
-        .navbar-brand img {
-            width: 50px;
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            margin-left: -250px; /* Przesunięcie logo na lewą stronę */
+        }
+        .navbar-brand .icon-only {
+            height: 70px; /* Powiększenie obrazu IconOnly.png */
+            margin-right: 15px; /* Odstęp od drugiego obrazu */
+        }
+        .navbar-brand .logo-container {
+            height: 50px; /* Wysokość kontenera dla drugiego obrazu */
+            overflow: visible; /* Ukrycie wystającego obrazu */
+        }
+        .navbar-brand .text-only {
+            height: 100%; /* Dopasowanie wysokości obrazu do kontenera */
+            width: auto; /* Zachowanie proporcji */
+            transform: scale(4); /* Powiększenie obrazu */
+            transform-origin: left center; /* Punkt zaczepienia transformacji */
+        }
+        .navbar-nav {
+            margin-left: auto; /* Przesunięcie odnośników na prawą stronę */
         }
         .navbar-nav .nav-link {
             color: #333 !important;
@@ -60,41 +84,16 @@
         .navbar-nav .nav-link.active {
             color: #007bff !important;
         }
-        .btn-outline-primary {
-            color: #007bff;
-            border-color: #007bff;
-        }
-        .btn-outline-primary:hover {
-            color: #fff;
-            background-color: #007bff;
-            border-color: #007bff;
-        }
-        .container {
-            max-width: 1200px;
-        }
-        .hero .row {
-            flex-wrap: nowrap;
-        }
-        .hero .col-md-6 {
-            flex: 0 0 60%;
-            max-width: 60%;
-        }
-        .hero .col-md-6:last-child {
-            flex: 0 0 40%;
-            max-width: 40%;
-        }
-        .hero .col-md-6 img {
-            height: 100vh;
-            object-fit: cover;
-        }
     </style>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="Logo">
-            Air Pro
+            <img src="images/IconOnly.png" alt="Icon Only Logo" class="icon-only">
+            <div class="logo-container">
+                <img src="images/TextOnly.png" alt="Text Only Logo" class="text-only">
+            </div>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -118,10 +117,10 @@
                 <div class="col-md-6 d-flex align-items-center">
                     <div class="content">
                         <h2>Kim jesteśmy</h2>
-                        <h3>Poznaj nasz zespół!</h3>
-                        <p>Specjalizujemy się w nowoczesnych systemach grzewczych i chłodzących. Nasz doświadczony zespół fachowców dostarcza najwyższej jakości usługi na terenie całego kraju. Innowacyjne rozwiązania, profesjonalne podejście i sprawdzone metody – to nasza recepta na sukces.</p>
-                        <p>Zaufaj specjalistom – wybierz pewność i niezawodność!</p>
-                        <a href="contact.html" class="btn btn-outline-primary">Skontaktuj się z nami</a>
+                        <h3><span>Poznaj nasz zespół!</span></h3>
+                        <p>Jesteśmy ekspertami w dziedzinie nowoczesnych systemów grzewczych i chłodzących. Nasz doświadczony zespół dostarcza usługi najwyższej jakości w całym kraju. Innowacyjność, profesjonalizm i sprawdzone metody – to nasz przepis na sukces.</p>
+                        <p>Zaufaj naszym specjalistom – zapewniamy pewność i niezawodność!</p>
+                        <a href="contact.html" class="btn btn-primary">Skontaktuj się z nami</a>
                     </div>
                 </div>
             </div>
