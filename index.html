@@ -7,10 +7,21 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --navbar-height: 10vh; /* Wysokość paska nawigacyjnego */
+            --icon-logo-height: 10vh; /* Wysokość logo ikony */
+            --text-logo-height: 24vh; /* Wysokość logo tekstowego */
+            --hero-font-size: 5vw; /* Rozmiar czcionki nagłówka w sekcji hero */
+            --hero-paragraph-font-size: 2vw; /* Rozmiar czcionki paragrafu w sekcji hero */
+            --navbar-padding-horizontal: 10vw; /* Poziomy padding paska nawigacyjnego */
+            --navbar-border-radius: 10px; /* Zaokrąglenie paska nawigacyjnego */
+        }
+
         body {
             font-family: 'Roboto', sans-serif;
             font-size: 1.1rem; /* Powiększenie czcionki */
         }
+
         .hero {
             background: url('images/image1.png') no-repeat center center;
             background-size: cover;
@@ -21,64 +32,74 @@
             padding: 20px;
             text-align: left;
         }
+
         .hero-content {
             max-width: 600px;
         }
+
         .hero h1 {
-            font-size: 2.7rem; /* Powiększenie czcionki */
+            font-size: var(--hero-font-size); /* Powiększenie czcionki */
             font-weight: bold;
         }
+
         .hero h1 span {
             color: white; /* Biały kolor dla słowa "Komfort" */
         }
+
         .hero p {
-            font-size: 1.3rem; /* Powiększenie czcionki */
+            font-size: var(--hero-paragraph-font-size); /* Powiększenie czcionki */
             margin-bottom: 20px;
         }
+
         .hero .btn {
             margin-right: 10px;
             background-color: #007bff; /* Niebieski kolor */
             color: white;
         }
+
         .navbar {
             background-color: #ffffff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 10px 300px; /* Zwiększenie szerokości paska nawigacyjnego */
+            padding: 10px var(--navbar-padding-horizontal); /* Ustawienie poziomego paddingu paska nawigacyjnego */
             position: fixed;
-            width: calc(100% - 600px); /* Odjęcie marginesów od szerokości */
-            top: 30px; /* Odstęp od górnej krawędzi */
-            left: 300px; /* Zwiększony odstęp od lewej krawędzi */
-            right: 300px; /* Zwiększony odstęp od prawej krawędzi */
+            width: calc(100% - 2 * var(--navbar-padding-horizontal)); /* Ustawienie szerokości paska nawigacyjnego */
+            top: 0;
+            left: var(--navbar-padding-horizontal); /* Ustawienie lewego odstępu */
             z-index: 1000;
-            border-radius: 10px; /* Zaokrąglenie krawędzi */
-            overflow: hidden; /* Dodane do ukrycia wystającego obrazu */
+            height: var(--navbar-height); /* Ustawienie wysokości paska nawigacyjnego */
+            overflow: hidden; /* Ukrycie wystającego obrazu */
+            border-radius: var(--navbar-border-radius); /* Delikatne zaokrąglenie paska nawigacyjnego */
         }
+
         .navbar-brand {
             display: flex;
             align-items: center;
-            margin-left: -250px; /* Przesunięcie logo na lewą stronę */
         }
+
         .navbar-brand .icon-only {
-            height: 70px; /* Powiększenie obrazu IconOnly.png */
-            margin-right: 15px; /* Odstęp od drugiego obrazu */
+            height: var(--icon-logo-height); /* Wysokość logo ikony */
+            margin-right: 10px; /* Odstęp od drugiego obrazu */
         }
+
         .navbar-brand .logo-container {
-            height: 50px; /* Wysokość kontenera dla drugiego obrazu */
-            overflow: visible; /* Ukrycie wystającego obrazu */
+            height: var(--text-logo-height); /* Wysokość kontenera dla drugiego obrazu */
+            overflow: hidden; /* Ukrycie wystającego obrazu */
         }
+
         .navbar-brand .text-only {
             height: 100%; /* Dopasowanie wysokości obrazu do kontenera */
             width: auto; /* Zachowanie proporcji */
-            transform: scale(4); /* Powiększenie obrazu */
-            transform-origin: left center; /* Punkt zaczepienia transformacji */
         }
+
         .navbar-nav {
             margin-left: auto; /* Przesunięcie odnośników na prawą stronę */
         }
+
         .navbar-nav .nav-link {
             color: #333 !important;
             font-weight: bold;
         }
+
         .navbar-nav .nav-link.active {
             color: #007bff !important;
         }
@@ -107,10 +128,14 @@
 
     <!-- Hero Section -->
     <div class="hero">
-        <div class="hero-content">
-            <h1><span>Komfort</span> w Twoim domu przez cały rok</h1>
-            <p>Oferujemy innowacyjne systemy klimatyzacyjne i grzewcze, które zapewnią Ci doskonałe warunki w każdej porze roku.</p>
-            <a href="contact.html" class="btn btn-primary">Skontaktuj się z nami</a>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-lg-6 hero-content">
+                    <h1><span>Komfort</span> w Twoim domu przez cały rok</h1>
+                    <p>Oferujemy innowacyjne systemy klimatyzacyjne i grzewcze, które zapewnią Ci doskonałe warunki w każdej porze roku.</p>
+                    <a href="contact.html" class="btn btn-primary">Skontaktuj się z nami</a>
+                </div>
+            </div>
         </div>
     </div>
 
