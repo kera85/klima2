@@ -9,8 +9,8 @@
     <style>
         :root {
             --navbar-height: 10vh; /* Wysokość paska nawigacyjnego */
-            --icon-logo-height: 10vh; /* Wysokość logo ikony */
-            --text-logo-height: 24vh; /* Wysokość logo tekstowego */
+            --icon-logo-height: 6vh; /* Wysokość logo ikony */
+            --text-logo-height: 8vh; /* Wysokość logo tekstowego */
             --hero-font-size: 5vw; /* Rozmiar czcionki nagłówka w sekcji hero */
             --hero-paragraph-font-size: 2vw; /* Rozmiar czcionki paragrafu w sekcji hero */
             --navbar-padding-horizontal: 10vw; /* Poziomy padding paska nawigacyjnego */
@@ -85,6 +85,8 @@
         .navbar-brand .logo-container {
             height: var(--text-logo-height); /* Wysokość kontenera dla drugiego obrazu */
             overflow: hidden; /* Ukrycie wystającego obrazu */
+            display: flex;
+            align-items: center; /* Wyśrodkowanie logo w pionie */
         }
 
         .navbar-brand .text-only {
@@ -109,8 +111,8 @@
             :root {
                 --navbar-padding-horizontal: 5vw; /* Zmniejszenie paddingu na mniejszych ekranach */
                 --navbar-height: 12vh; /* Zwiększenie wysokości paska nawigacyjnego na mniejszych ekranach */
-                --icon-logo-height: 8vh; /* Zmniejszenie wysokości logo ikony na mniejszych ekranach */
-                --text-logo-height: 20vh; /* Utrzymanie wysokości logo tekstowego na mniejszych ekranach */
+                --icon-logo-height: 6vh; /* Zmniejszenie wysokości logo ikony na mniejszych ekranach */
+                --text-logo-height: 8vh; /* Utrzymanie wysokości logo tekstowego na mniejszych ekranach */
             }
 
             .navbar {
