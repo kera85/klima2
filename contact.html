@@ -138,6 +138,40 @@
         .form-check-label {
             color: #333; /* Adjust this value to make the text darker */
         }
+
+        @media (max-width: 768px) {
+            :root {
+                --navbar-padding-horizontal: 5vw; /* Zmniejszenie paddingu na mniejszych ekranach */
+                --navbar-height: 12vh; /* Zwiększenie wysokości paska nawigacyjnego na mniejszych ekranach */
+            }
+
+            .navbar {
+                width: calc(100% - 2 * var(--navbar-padding-horizontal)); /* Ustawienie szerokości paska nawigacyjnego */
+                top: var(--navbar-margin-top); /* Oddalenie paska nawigacyjnego od górnej krawędzi */
+                left: var(--navbar-padding-horizontal); /* Ustawienie lewego odstępu */
+            }
+
+            .hero-content {
+                margin-left: 5%; /* Zmniejszenie lewego marginesu na mniejszych ekranach */
+                margin-right: 5%; /* Dodanie prawego marginesu na mniejszych ekranach */
+            }
+
+            .hero-content h2 {
+                font-size: 7vw; /* Zmniejszenie rozmiaru czcionki nagłówka na mniejszych ekranach */
+            }
+
+            .hero-content p {
+                font-size: 3vw; /* Zmniejszenie rozmiaru czcionki paragrafu na mniejszych ekranach */
+            }
+
+            .navbar-brand .icon-only {
+                height: 8vh; /* Zmniejszenie wysokości logo ikony na mniejszych ekranach */
+            }
+
+            .navbar-brand .logo-container {
+                height: 4vh; /* Zmniejszenie wysokości logo tekstowego na mniejszych ekranach */
+            }
+        }
     </style>
 </head>
 <body>
