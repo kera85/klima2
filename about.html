@@ -98,14 +98,17 @@
                 --navbar-padding-horizontal: 5vw; /* Zmniejszenie paddingu na mniejszych ekranach */
                 --navbar-height: 12vh; /* Zwiększenie wysokości paska nawigacyjnego na mniejszych ekranach */
                 --icon-logo-height: 8vh; /* Zmniejszenie wysokości logo ikony na mniejszych ekranach */
-                --text-logo-height: 20vh; /* Zmniejszenie wysokości logo tekstowego na mniejszych ekranach */
+                --text-logo-height: 24vh; /* Utrzymanie wysokości logo tekstowego na mniejszych ekranach */
             }
 
             .navbar {
-                width: calc(100% - 2 * var(--navbar-padding-horizontal)); /* Ustawienie szerokości paska nawigacyjnego */
-                top: var(--navbar-margin-top); /* Oddalenie paska nawigacyjnego od górnej krawędzi */
-                left: var(--navbar-padding-horizontal); /* Ustawienie lewego odstępu */
-                height: var(--navbar-height); /* Ustawienie wysokości paska nawigacyjnego */
+                width: 100%; /* Ustawienie szerokości paska nawigacyjnego */
+                padding-left: var(--navbar-padding-horizontal); /* Ustawienie paddingu paska nawigacyjnego */
+                padding-right: var(--navbar-padding-horizontal); /* Ustawienie paddingu paska nawigacyjnego */
+            }
+
+            .navbar-toggler {
+                margin-left: auto;
             }
 
             .hero img {
