@@ -130,6 +130,7 @@
                 border-radius: 0;
                 height: auto; /* Zmienione na auto */
                 display: block; /* Zmienione na block */
+                text-align: center; /* Dodane */
             }
 
             .navbar-brand {
@@ -154,11 +155,12 @@
             .navbar-nav {
                 display: flex;
                 justify-content: center; /* Dodane aby linki były na środku */
-                flex-wrap: wrap; /* Dodane aby linki były w jednej linii */
+                flex-direction: row; /* Zmienione na flex-direction: row */
+                margin: 0 auto; /* Dodane aby centrować linki */
             }
 
             .navbar-nav .nav-item {
-                flex: 1; /* Dodane aby linki miały równą szerokość */
+                flex: none; /* Zmienione na flex: none */
                 text-align: center; /* Dodane aby linki były wyśrodkowane */
             }
 
