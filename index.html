@@ -55,10 +55,13 @@
         }
         .navbar-nav {
             margin-left: auto;
+            display: flex;
+            align-items: center; /* Dodane */
         }
         .navbar-nav .nav-link {
             color: #333 !important;
             font-weight: bold;
+            padding: 10px; /* Dodane */
         }
         .navbar-nav .nav-link.active {
             color: #007bff !important;
@@ -125,9 +128,15 @@
                 left: 0;
                 top: 0;
                 border-radius: 0;
-                height: var(--navbar-height);
+                height: auto; /* Zmienione na auto */
+                display: block; /* Zmienione na block */
+            }
+
+            .navbar-brand {
                 display: flex;
-                align-items: center; /* Dodane aby wyrównać pionowo logo */
+                align-items: center;
+                justify-content: center; /* Dodane aby logo było na środku */
+                margin-bottom: 10px; /* Dodane odstęp poniżej logo */
             }
 
             .navbar-brand .logo-container {
@@ -140,6 +149,11 @@
             .navbar-brand .text-only {
                 height: auto;
                 width: 100%; /* Dodane */
+            }
+
+            .navbar-nav {
+                display: flex;
+                justify-content: center; /* Dodane aby linki były na środku */
             }
 
             .hero {
@@ -180,10 +194,7 @@
                 <img src="images/TextOnly.png" alt="Text Only Logo" class="text-only">
             </div>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse show" id="navbarNav"> <!-- Zmienione na show aby zawsze były widoczne -->
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a class="nav-link active" href="index.html">Strona główna</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">O nas</a></li>
