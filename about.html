@@ -21,69 +21,40 @@
         body {
             font-family: 'Roboto', sans-serif;
             font-size: 1.1rem; /* Powiększenie czcionki */
+            margin: 0;
         }
-        .hero {
-            padding: 0;
-            margin-top: -60px; /* Adjust for the navbar height */
-        }
-        .hero img {
-            width: 100%;
-            height: 100vh;
-            object-fit: cover;
-            margin-top: 60px; /* Adjust for the navbar height */
-        }
-        .content {
-            padding: 60px 20px;
-        }
-        .content h2 {
-            font-size: 2.7rem; /* Powiększenie czcionki */
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .content h3 {
-            font-size: 2.2rem; /* Powiększenie czcionki */
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        .content h3 span {
-            color: #007bff; /* Niebieski kolor dla napisu "Poznaj nasz zespół!" */
-        }
-        .content p {
-            font-size: 1.3rem; /* Powiększenie czcionki */
-            margin-bottom: 10px;
-            max-width: 500px;
-        }
+
         .navbar {
             background-color: #ffffff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 10px var(--navbar-padding-horizontal); /* Ustawienie poziomego paddingu paska nawigacyjnego */
+            padding: 10px var(--navbar-padding-horizontal);
             position: fixed;
-            width: calc(100% - 2 * var(--navbar-padding-horizontal)); /* Ustawienie szerokości paska nawigacyjnego */
-            top: var(--navbar-margin-top); /* Oddalenie paska nawigacyjnego od górnej krawędzi */
-            left: var(--navbar-padding-horizontal); /* Ustawienie lewego odstępu */
+            width: calc(100% - 2 * var(--navbar-padding-horizontal));
+            top: var(--navbar-margin-top);
+            left: var(--navbar-padding-horizontal);
             z-index: 1000;
-            height: var(--navbar-height); /* Ustawienie wysokości paska nawigacyjnego */
-            overflow: hidden; /* Ukrycie wystającego obrazu */
-            border-radius: var(--navbar-border-radius); /* Delikatne zaokrąglenie paska nawigacyjnego */
+            height: var(--navbar-height);
+            overflow: hidden;
+            border-radius: var(--navbar-border-radius);
         }
         .navbar-brand {
             display: flex;
             align-items: center;
         }
         .navbar-brand .icon-only {
-            height: var(--icon-logo-height); /* Wysokość logo ikony */
-            margin-right: 10px; /* Odstęp od drugiego obrazu */
+            height: var(--icon-logo-height);
+            margin-right: 10px;
         }
         .navbar-brand .logo-container {
-            height: var(--text-logo-height); /* Wysokość kontenera dla drugiego obrazu */
-            overflow: hidden; /* Ukrycie wystającego obrazu */
+            height: var(--text-logo-height);
+            overflow: hidden;
         }
         .navbar-brand .text-only {
-            height: 100%; /* Dopasowanie wysokości obrazu do kontenera */
-            width: auto; /* Zachowanie proporcji */
+            height: 100%;
+            width: auto;
         }
         .navbar-nav {
-            margin-left: auto; /* Przesunięcie odnośników na prawą stronę */
+            margin-left: auto;
         }
         .navbar-nav .nav-link {
             color: #333 !important;
@@ -93,20 +64,68 @@
             color: #007bff !important;
         }
 
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: url('images/image2.png') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: left;
+            color: black; /* Czarny kolor tekstu */
+            padding-left: 10%;
+        }
+
+        .hero .content {
+            max-width: 700px;
+            background: rgba(255, 255, 255, 0.7); /* Biała półprzezroczysta ramka */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .hero h2 {
+            font-size: var(--hero-font-size);
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero h3 {
+            font-size: var(--hero-paragraph-font-size);
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #007bff; /* Niebieski kolor liter */
+        }
+
+        .hero .highlight {
+            font-size: 1.5rem; /* Zmiana rozmiaru czcionki dla konkretnego napisu */
+            font-weight: bold; /* Dodanie pogrubienia */
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero .btn {
+            font-size: 1.3rem;
+        }
+
         @media (max-width: 768px) {
             :root {
-                --navbar-padding-horizontal: 5vw; /* Zmniejszenie paddingu na mniejszych ekranach */
-                --navbar-height: 12vh; /* Zwiększenie wysokości paska nawigacyjnego na mniejszych ekranach */
-                --icon-logo-height: 8vh; /* Zmniejszenie wysokości logo ikony na mniejszych ekranach */
-                --text-logo-height: 20vh; /* Utrzymanie wysokości logo tekstowego na mniejszych ekranach */
+                --navbar-padding-horizontal: 5vw;
+                --navbar-height: 12vh;
+                --icon-logo-height: 8vh;
+                --text-logo-height: 20vh;
             }
 
             .navbar {
-                width: 100%; /* Ustawienie szerokości paska nawigacyjnego */
-                padding-left: var(--navbar-padding-horizontal); /* Ustawienie paddingu paska nawigacyjnego */
-                padding-right: var(--navbar-padding-horizontal); /* Ustawienie paddingu paska nawigacyjnego */
-                left: 0; /* Wyśrodkowanie paska nawigacyjnego */
-                border-radius: 0; /* Usunięcie zaokrąglenia na mniejszych ekranach */
+                width: 100%;
+                padding-left: var(--navbar-padding-horizontal);
+                padding-right: var(--navbar-padding-horizontal);
+                left: 0;
+                border-radius: 0;
             }
 
             .navbar-toggler {
@@ -118,23 +137,28 @@
             }
 
             .navbar-collapse {
-                text-align: center; /* Wyśrodkowanie elementów nawigacji */
+                text-align: center;
             }
 
-            .hero img {
-                height: 50vh; /* Zmniejszenie wysokości obrazka hero na mniejszych ekranach */
+            .hero {
+                justify-content: center;
+                padding-left: 0;
             }
 
-            .content h2 {
-                font-size: 5vw; /* Zmniejszenie rozmiaru czcionki nagłówka na mniejszych ekranach */
+            .hero h2 {
+                font-size: 7vw;
             }
 
-            .content h3 {
-                font-size: 4vw; /* Zmniejszenie rozmiaru czcionki podtytułu na mniejszych ekranach */
+            .hero h3 {
+                font-size: 5vw;
             }
 
-            .content p {
-                font-size: 3vw; /* Zmniejszenie rozmiaru czcionki paragrafu na mniejszych ekranach */
+            .hero p {
+                font-size: 3vw;
+            }
+
+            .hero .btn {
+                font-size: 3vw;
             }
         }
     </style>
@@ -162,21 +186,12 @@
 
     <!-- Hero Section -->
     <div class="hero">
-        <div class="container-fluid p-0">
-            <div class="row no-gutters">
-                <div class="col-md-6">
-                    <img src="images/image2.png" alt="O nas" class="img-fluid">
-                </div>
-                <div class="col-md-6 d-flex align-items-center">
-                    <div class="content">
-                        <h2>Kim jesteśmy</h2>
-                        <h3><span>Poznaj nasz zespół!</span></h3>
-                        <p>Jesteśmy ekspertami w dziedzinie nowoczesnych systemów grzewczych i chłodzących. Nasz doświadczony zespół dostarcza usługi najwyższej jakości w całym kraju. Innowacyjność, profesjonalizm i sprawdzone metody – to nasz przepis na sukces.</p>
-                        <p>Zaufaj naszym specjalistom – zapewniamy pewność i niezawodność!</p>
-                        <a href="contact.html" class="btn btn-primary">Skontaktuj się z nami</a>
-                    </div>
-                </div>
-            </div>
+        <div class="content">
+            <h2>Kim jesteśmy</h2>
+            <h3><span>Poznaj nasz zespół!</span></h3>
+            <p>Jesteśmy ekspertami w dziedzinie nowoczesnych systemów grzewczych i chłodzących. Nasz doświadczony zespół dostarcza usługi najwyższej jakości w całym kraju. Innowacyjność, profesjonalizm i sprawdzone metody – to nasz przepis na sukces.</p>
+            <p>Zaufaj naszym specjalistom – zapewniamy pewność i niezawodność!</p>
+            <a href="contact.html" class="btn btn-primary">Skontaktuj się z nami</a>
         </div>
     </div>
 

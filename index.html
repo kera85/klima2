@@ -3,122 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Air Pro - Strona główna</title>
+    <title>Strona główna - Air Pro</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --navbar-height: 10vh; /* Wysokość paska nawigacyjnego */
-            --icon-logo-height: 10vh; /* Wysokość logo ikony */
-            --text-logo-height: 24vh; /* Wysokość logo tekstowego */
-            --hero-font-size: 5vw; /* Rozmiar czcionki nagłówka w sekcji hero */
-            --hero-paragraph-font-size: 2vw; /* Rozmiar czcionki paragrafu w sekcji hero */
-            --navbar-padding-horizontal: 10vw; /* Poziomy padding paska nawigacyjnego */
-            --navbar-border-radius: 10px; /* Zaokrąglenie paska nawigacyjnego */
-            --navbar-margin-top: 20px; /* Margines górny paska nawigacyjnego */
+            --navbar-height: 10vh;
+            --icon-logo-height: 10vh;
+            --text-logo-height: 24vh;
+            --hero-font-size: 5vw;
+            --hero-paragraph-font-size: 2vw;
+            --navbar-padding-horizontal: 10vw;
+            --navbar-border-radius: 10px;
+            --navbar-margin-top: 20px;
         }
 
         body {
             font-family: 'Roboto', sans-serif;
             font-size: 1.1rem; /* Powiększenie czcionki */
-        }
-
-        .hero {
-            background: url('images/image1.png') no-repeat center center;
-            background-size: cover;
-            min-height: 100vh;
-            color: white;
-            display: flex;
-            align-items: center;
-            padding: 20px;
-            text-align: left;
-        }
-
-        .hero-content {
-            max-width: 600px;
-        }
-
-        .hero h1 {
-            font-size: var(--hero-font-size); /* Powiększenie czcionki */
-            font-weight: bold;
-        }
-
-        .hero h1 span {
-            color: white; /* Biały kolor dla słowa "Komfort" */
-        }
-
-        .hero p {
-            font-size: var(--hero-paragraph-font-size); /* Powiększenie czcionki */
-            margin-bottom: 20px;
-        }
-
-        .hero .btn {
-            margin-right: 10px;
-            background-color: #007bff; /* Niebieski kolor */
-            color: white;
+            margin: 0;
         }
 
         .navbar {
             background-color: #ffffff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 10px var(--navbar-padding-horizontal); /* Ustawienie poziomego paddingu paska nawigacyjnego */
+            padding: 10px var(--navbar-padding-horizontal);
             position: fixed;
-            width: calc(100% - 2 * var(--navbar-padding-horizontal)); /* Ustawienie szerokości paska nawigacyjnego */
-            top: var(--navbar-margin-top); /* Oddalenie paska nawigacyjnego od górnej krawędzi */
-            left: var(--navbar-padding-horizontal); /* Ustawienie lewego odstępu */
+            width: calc(100% - 2 * var(--navbar-padding-horizontal));
+            top: var(--navbar-margin-top);
+            left: var(--navbar-padding-horizontal);
             z-index: 1000;
-            height: var(--navbar-height); /* Ustawienie wysokości paska nawigacyjnego */
-            overflow: hidden; /* Ukrycie wystającego obrazu */
-            border-radius: var(--navbar-border-radius); /* Delikatne zaokrąglenie paska nawigacyjnego */
+            height: var(--navbar-height);
+            overflow: hidden;
+            border-radius: var(--navbar-border-radius);
         }
-
         .navbar-brand {
             display: flex;
             align-items: center;
         }
-
         .navbar-brand .icon-only {
-            height: var(--icon-logo-height); /* Wysokość logo ikony */
-            margin-right: 10px; /* Odstęp od drugiego obrazu */
+            height: var(--icon-logo-height);
+            margin-right: 10px;
         }
-
         .navbar-brand .logo-container {
-            height: var(--text-logo-height); /* Wysokość kontenera dla drugiego obrazu */
-            overflow: hidden; /* Ukrycie wystającego obrazu */
+            height: var(--text-logo-height);
+            overflow: hidden;
         }
-
         .navbar-brand .text-only {
-            height: 100%; /* Dopasowanie wysokości obrazu do kontenera */
-            width: auto; /* Zachowanie proporcji */
+            height: 100%;
+            width: auto;
         }
-
         .navbar-nav {
-            margin-left: auto; /* Przesunięcie odnośników na prawą stronę */
+            margin-left: auto;
         }
-
         .navbar-nav .nav-link {
             color: #333 !important;
             font-weight: bold;
         }
-
         .navbar-nav .nav-link.active {
             color: #007bff !important;
         }
 
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: url('images/image1.png') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: left;
+            color: black; /* Czarny kolor tekstu */
+            padding-left: 10%;
+        }
+
+        .hero .content {
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.7); /* Biała półprzezroczysta ramka */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .hero h2 {
+            font-size: var(--hero-font-size);
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero h3 {
+            font-size: var(--hero-paragraph-font-size);
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #007bff; /* Niebieski kolor liter */
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: black; /* Czarny kolor tekstu */
+        }
+
+        .hero .btn {
+            font-size: 1.3rem;
+        }
+
         @media (max-width: 768px) {
             :root {
-                --navbar-padding-horizontal: 5vw; /* Zmniejszenie paddingu na mniejszych ekranach */
-                --navbar-height: 12vh; /* Zwiększenie wysokości paska nawigacyjnego na mniejszych ekranach */
-                --icon-logo-height: 8vh; /* Zmniejszenie wysokości logo ikony na mniejszych ekranach */
-                --text-logo-height: 20vh; /* Utrzymanie wysokości logo tekstowego na mniejszych ekranach */
+                --navbar-padding-horizontal: 5vw;
+                --navbar-height: 12vh;
+                --icon-logo-height: 8vh;
+                --text-logo-height: 20vh;
             }
 
             .navbar {
-                width: 100%; /* Ustawienie szerokości paska nawigacyjnego */
-                padding-left: var(--navbar-padding-horizontal); /* Ustawienie paddingu paska nawigacyjnego */
-                padding-right: var(--navbar-padding-horizontal); /* Ustawienie paddingu paska nawigacyjnego */
-                left: 0; /* Wyśrodkowanie paska nawigacyjnego */
-                border-radius: 0; /* Usunięcie zaokrąglenia na mniejszych ekranach */
+                width: 100%;
+                padding-left: var(--navbar-padding-horizontal);
+                padding-right: var(--navbar-padding-horizontal);
+                left: 0;
+                border-radius: 0;
             }
 
             .navbar-toggler {
@@ -130,19 +133,28 @@
             }
 
             .navbar-collapse {
-                text-align: center; /* Wyśrodkowanie elementów nawigacji */
+                text-align: center;
             }
 
-            .hero h1 {
-                font-size: 7vw; /* Zmniejszenie rozmiaru czcionki nagłówka na mniejszych ekranach */
+            .hero {
+                justify-content: center;
+                padding-left: 0;
+            }
+
+            .hero h2 {
+                font-size: 7vw;
+            }
+
+            .hero h3 {
+                font-size: 5vw;
             }
 
             .hero p {
-                font-size: 3vw; /* Zmniejszenie rozmiaru czcionki paragrafu na mniejszych ekranach */
+                font-size: 3vw;
             }
 
-            .hero-content {
-                max-width: 90%; /* Zmniejszenie maksymalnej szerokości treści na mniejszych ekranach */
+            .hero .btn {
+                font-size: 3vw;
             }
         }
     </style>
@@ -170,14 +182,12 @@
 
     <!-- Hero Section -->
     <div class="hero">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-lg-6 hero-content">
-                    <h1><span>Komfort</span> w Twoim domu przez cały rok</h1>
-                    <p>Oferujemy innowacyjne systemy klimatyzacyjne i grzewcze, które zapewnią Ci doskonałe warunki w każdej porze roku.</p>
-                    <a href="contact.html" class="btn btn-primary">Skontaktuj się z nami</a>
-                </div>
-            </div>
+        <div class="content">
+            <h2>Witamy w Air Pro</h2>
+            <h3><span>Najlepsze rozwiązania dla Twojego domu!</span></h3>
+            <p class="highlight">Komfort w Twoim domu przez cały rok. Oferujemy innowacyjne systemy klimatyzacyjne i grzewcze, które zapewnią Ci doskonałe warunki w każdej porze roku.</p>
+            <p>Zaufaj naszym ekspertom i ciesz się komfortem przez cały rok!</p>
+            <a href="contact.html" class="btn btn-primary">Skontaktuj się z nami</a>
         </div>
     </div>
 
