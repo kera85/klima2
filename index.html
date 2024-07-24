@@ -113,7 +113,8 @@
                 --navbar-padding-horizontal: 5vw;
                 --navbar-height: 12vh;
                 --icon-logo-height: 8vh;
-                --text-logo-height: 20vh;
+                --text-logo-height: 10vh;
+                --navbar-margin-top: 10px;
             }
 
             .navbar {
@@ -121,24 +122,24 @@
                 padding-left: var(--navbar-padding-horizontal);
                 padding-right: var(--navbar-padding-horizontal);
                 left: 0;
+                top: 0;
                 border-radius: 0;
+                height: var(--navbar-height);
             }
 
-            .navbar-toggler {
-                margin-left: auto;
-            }
-
-            .navbar-brand {
-                margin-right: auto;
-            }
-
-            .navbar-collapse {
-                text-align: center;
+            .navbar-brand .logo-container {
+                height: var(--icon-logo-height);
             }
 
             .hero {
                 justify-content: center;
                 padding-left: 0;
+                text-align: center;
+            }
+
+            .hero .content {
+                padding: 10px;
+                max-width: 90%;
             }
 
             .hero h2 {
