@@ -123,6 +123,9 @@
                 --text-logo-height: 10vh;
                 --text-logo-width-mobile: 50vw;
                 --navbar-margin-top: 0;
+                --hero-font-size-mobile: 7vw;
+                --hero-paragraph-font-size-mobile: 5vw;
+                --hero-p-font-size-mobile: 4vw; /* Dodane */
             }
 
             .navbar {
@@ -180,15 +183,15 @@
             }
 
             .hero h2 {
-                font-size: 7vw;
+                font-size: var(--hero-font-size-mobile);
             }
 
             .hero h3 {
-                font-size: 5vw;
+                font-size: var(--hero-paragraph-font-size-mobile);
             }
 
             .hero p {
-                font-size: 3vw;
+                font-size: var(--hero-p-font-size-mobile); /* Zmienione */
             }
 
             .hero .btn {
