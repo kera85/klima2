@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt - Air Pro</title>
+    <title>Kontakt - Montaż Klimatyzacji Warszawa | Air Pro</title>
+    <meta name="description" content="Skontaktuj się z Air Pro, specjalistami od montażu klimatyzacji w Warszawie i okolicach. Uzyskaj fachową poradę i najlepsze rozwiązania.">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -70,13 +71,13 @@
         .hero {
             background: url('images/image4.png') no-repeat center top;
             background-size: cover;
-            min-height: 100vh;
+            min-height: calc(100vh - var(--navbar-height));
             color: white;
             display: flex;
             align-items: center;
             padding: 20px;
             text-align: left;
-            margin-top: var(--navbar-height); /* Dodane aby dodać margines górny */
+            margin-top: 0;
         }
         .hero-content {
             max-width: 600px;
@@ -86,8 +87,14 @@
             padding: 20px;
             border-radius: 10px;
         }
-        .hero-content h2 {
+        .hero-content h1 {
             font-size: 2.7rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: black;
+        }
+        .hero-content h2 {
+            font-size: 2.2rem;
             font-weight: bold;
             margin-bottom: 20px;
             color: black;
@@ -157,6 +164,12 @@
             color: #333;
         }
 
+        @media (min-width: 769px) {
+            .form-check-label {
+                font-size: 0.8rem; /* Zmniejszenie czcionki tylko na komputery */
+            }
+        }
+
         @media (max-width: 768px) {
             :root {
                 --navbar-padding-horizontal: 5vw;
@@ -165,8 +178,8 @@
                 --text-logo-height: 10vh;
                 --text-logo-width-mobile: 50vw;
                 --navbar-margin-top: 0;
-                --highlight-font-size-mobile: 5vw; /* Dodane */
-                --hero-content-h2-font-size-mobile: 7vw; /* Dodane */
+                --highlight-font-size-mobile: 5vw;
+                --hero-content-h2-font-size-mobile: 7vw;
             }
 
             .navbar {
@@ -213,26 +226,26 @@
             }
 
             .hero {
-                margin-top: var(--navbar-height); /* Dodane aby dodać margines górny */
+                margin-top: var(--navbar-height);
             }
 
             .hero-content {
                 margin-left: 5%;
                 margin-right: 5%;
                 margin-top: 20px;
-                text-align: center; /* Wyśrodkowanie tekstu */
+                text-align: center;
             }
 
-            .hero-content h2 {
-                font-size: var(--hero-content-h2-font-size-mobile); /* Zwiększenie czcionki */
+            .hero-content h1 {
+                font-size: var(--hero-content-h2-font-size-mobile);
             }
 
             .hero-content p {
-                font-size: 4vw; /* Powiększono czcionkę */
+                font-size: 4vw;
             }
 
             .hero-content .highlight {
-                font-size: var(--highlight-font-size-mobile); /* Dodane */
+                font-size: var(--highlight-font-size-mobile);
             }
 
             .contact-form {
@@ -241,11 +254,11 @@
             }
 
             .hero-content .contact-info {
-                font-size: 4vw; /* Powiększono czcionkę */
+                font-size: 4vw;
             }
 
             .form-check-label {
-                font-size: 2vw; /* Zmniejszono czcionkę */
+                font-size: 2vw;
             }
         }
     </style>
@@ -254,9 +267,9 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="index.html">
-            <img src="images/IconOnly.png" alt="Icon Only Logo" class="icon-only">
+            <img src="images/IconOnly.png" alt="Air Pro - logo ikonowe montaż klimatyzacji Warszawa" class="icon-only">
             <div class="logo-container">
-                <img src="images/TextOnly.png" alt="Text Only Logo" class="text-only">
+                <img src="images/TextOnly.png" alt="Air Pro - tekstowe logo montaż klimatyzacji Warszawa" class="text-only">
             </div>
         </a>
         <div class="collapse navbar-collapse show" id="navbarNav">
@@ -271,7 +284,7 @@
     <!-- Hero Section -->
     <div class="hero">
         <div class="hero-content">
-            <h2>Skontaktuj się z nami</h2>
+            <h1>Skontaktuj się z nami</h1>
             <p class="highlight">Potrzebujesz porady?</p>
             <p>Jesteśmy tu, aby pomóc Ci znaleźć najlepsze rozwiązanie.</p>
             <p>Działamy na terenie Warszawy i okolic.</p>
