@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://klimatyzacja-warszawa.eu/sitemap.xml
