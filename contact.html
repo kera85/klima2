@@ -12,7 +12,7 @@
             --navbar-height: 10vh;
             --icon-logo-height: 10vh;
             --text-logo-height: 24vh;
-            --hero-font-size: 5vw;
+            --hero-font-size: 3vw;
             --hero-paragraph-font-size: 2vw;
             --navbar-padding-horizontal: 10vw;
             --navbar-border-radius: 10px;
@@ -71,106 +71,47 @@
         .hero {
             position: relative;
             width: 100%;
-            height: 100vh;
+            min-height: 100vh;
             background: url('images/image4.png') no-repeat center center;
             background-size: cover;
             display: flex;
             align-items: center;
-            justify-content: flex-start; /* Dodano, aby wyrównać zawartość do lewej */
+            justify-content: flex-start;
             text-align: left;
             color: black;
-            padding: 20px;
+            padding-top: calc(var(--navbar-height) + var(--navbar-margin-top) + 20px);
+            padding-bottom: 20px;
+            padding-left: 10%;
         }
-        .hero-content {
+
+        .hero .content {
             max-width: 600px;
-            margin-left: 10%;
-            margin-top: 200px; /* Add this line to push the text down */
             background: rgba(255, 255, 255, 0.7);
             padding: 20px;
             border-radius: 10px;
         }
-        .hero-content h1 {
-            font-size: 2.7rem;
+
+        .hero h1 {
+            font-size: var(--hero-font-size);
             font-weight: bold;
             margin-bottom: 20px;
-            color: black;
-        }
-        .hero-content h2 {
-            font-size: 2.2rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: black;
-        }
-        .hero-content p {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: black;
-        }
-        .hero-content .highlight {
-            font-size: 2vw;
-            font-weight: bold;
-            color: #007bff;
-        }
-        .hero-content .contact-info p {
-            margin-bottom: 10px;
-            color: black;
-        }
-        .hero-content .btn {
-            margin-right: 10px;
-            background-color: #007bff;
-            color: white;
-        }
-        .contact-info {
-            color: white;
-            margin-bottom: 20px;
-        }
-        .contact-info img {
-            width: 150px;
-            margin-bottom: 20px;
-        }
-        .contact-info p {
-            margin: 0;
-            color: black;
-        }
-        .contact-info a {
-            color: black;
-            text-decoration: none;
-        }
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-        .contact-form {
-            max-width: 500px;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-            text-align: left; /* Dodano, aby wyrównać tekst do lewej */
-        }
-        .contact-form .form-group {
-            margin-bottom: 15px;
-        }
-        .contact-form .form-control {
-            height: 40px;
-            border-radius: 0;
-        }
-        .contact-form textarea {
-            height: 120px;
-            border-radius: 0;
-        }
-        .contact-form .btn {
-            width: 100%;
-            height: 40px;
-            border-radius: 0;
-        }
-        .form-check-label {
-            color: #333;
         }
 
-        @media (min-width: 769px) {
-            .form-check-label {
-                font-size: 0.8rem; /* Zmniejszenie czcionki tylko na komputery */
-            }
+        .hero h3 {
+            font-size: var(--hero-paragraph-font-size);
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .hero .btn {
+            font-size: 1.3rem;
         }
 
         @media (max-width: 768px) {
@@ -181,8 +122,9 @@
                 --text-logo-height: 10vh;
                 --text-logo-width-mobile: 50vw;
                 --navbar-margin-top: 0;
-                --highlight-font-size-mobile: 5vw;
-                --hero-content-h2-font-size-mobile: 7vw;
+                --hero-font-size-mobile: 7vw;
+                --hero-paragraph-font-size-mobile: 5vw;
+                --hero-p-font-size-mobile: 4vw;
             }
 
             .navbar {
@@ -229,40 +171,31 @@
             }
 
             .hero {
-                margin-top: var(--navbar-height);
+                justify-content: center;
+                padding-left: 5%;
+                text-align: center;
+                padding-top: calc(var(--navbar-height) + 20px);
             }
 
-            .hero-content {
-                margin-left: 5%;
-                margin-right: 5%;
-                margin-top: 20px;
-                text-align: left; /* Dodano, aby wyrównać tekst do lewej */
+            .hero .content {
+                padding: 10px;
+                max-width: 90%;
             }
 
-            .hero-content h1 {
-                font-size: var(--hero-content-h2-font-size-mobile);
+            .hero h1 {
+                font-size: var(--hero-font-size-mobile);
             }
 
-            .hero-content p {
-                font-size: 4vw;
+            .hero h3 {
+                font-size: var(--hero-paragraph-font-size-mobile);
             }
 
-            .hero-content .highlight {
-                font-size: var(--highlight-font-size-mobile);
+            .hero p {
+                font-size: var(--hero-p-font-size-mobile);
             }
 
-            .contact-form {
-                width: 90%;
-                margin: 0 auto;
-                text-align: left; /* Dodano, aby wyrównać tekst do lewej */
-            }
-
-            .hero-content .contact-info {
-                font-size: 4vw;
-            }
-
-            .form-check-label {
-                font-size: 2vw;
+            .hero .btn {
+                font-size: 3vw;
             }
         }
     </style>
@@ -287,14 +220,12 @@
 
     <!-- Hero Section -->
     <div class="hero">
-        <div class="hero-content">
+        <div class="content">
             <h1>Skontaktuj się z nami</h1>
-            <p class="highlight">Potrzebujesz porady?</p>
+            <h3><span>Potrzebujesz porady?</span></h3>
             <p>Jesteśmy tu, aby pomóc Ci znaleźć najlepsze rozwiązanie.</p>
             <p>Działamy na terenie Warszawy i okolic.</p>
-            <div class="contact-info">
-                <p><a href="mailto:airpro.klimatyzacjawarszawa@gmail.com">airpro.klimatyzacjawarszawa@gmail.com</a></p>
-            </div>
+            <p><a href="mailto:klimatyzacja.airpro@gmail.com">klimatyzacja.airpro@gmail.com</a></p>
             <div class="contact-form">
                 <form action="https://formspree.io/f/xeojqbwn" method="POST">
                     <div class="form-group">
