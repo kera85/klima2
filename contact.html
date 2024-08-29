@@ -18,6 +18,22 @@
       gtag('config', 'AW-16683705031');
     </script>
 
+    <!-- Conversion tracking script -->
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-16683705031/gTz_CP2WlM4ZEMfFtJM-',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+
     <style>
         :root {
             --navbar-height: 10vh;
@@ -239,7 +255,7 @@
             <p>mail: <a href="mailto:klimatyzacja.airpro@gmail.com">klimatyzacja.airpro@gmail.com</a></p>
             <p>tel.: <a href="tel:692358168">692-358-168</a></p>
             <div class="contact-form">
-                <form id="contactForm" action="https://formspree.io/f/xeojqbwn" method="POST" onsubmit="return gtagSendEvent('https://formspree.io/thanks?language=en');">
+                <form id="contactForm" action="https://formspree.io/f/xeojqbwn" method="POST" onsubmit="return gtag_report_conversion('https://formspree.io/thanks?language=en');">
                     <div class="form-group">
                         <input type="text" name="name" class="form-control" placeholder="Imię" required>
                     </div>
@@ -256,31 +272,11 @@
                         <input type="checkbox" class="form-check-input" id="consentCheck" required>
                         <label class="form-check-label" for="consentCheck">Wyrażam zgodę na otrzymywanie drogą elektroniczną na wskazany przeze mnie adres e-mail informacji dotyczących świadczonych przez Administratora usług. Zgoda może zostać cofnięta w każdym czasie.*</label>
                     </div>
-                    <!-- Zmieniono onclick na onsubmit -->
-                    <button type="submit" class="btn btn-primary">Wyślij wiadomość</button>
+                    <button type="submit" class="btn btn-primary" onclick="gtag('event', 'click', {'event_category': 'Button', 'event_label': 'Wyślij wiadomość'});">Wyślij wiadomość</button>
                 </form>
             </div>
         </div>
     </div>
-
-    <!-- Google tag (gtag.js) event - delayed navigation helper -->
-    <script>
-      // Helper function to delay opening a URL until a gtag event is sent.
-      // Call it in response to an action that should navigate to a URL.
-      function gtagSendEvent(url) {
-        var callback = function () {
-          if (typeof url === 'string') {
-            window.location = url;
-          }
-        };
-        gtag('event', 'ads_conversion_Submit_lead_form_1', {
-          'event_callback': callback,
-          'event_timeout': 2000,
-          // Możesz dodać dodatkowe parametry zdarzenia, jeśli to potrzebne.
-        });
-        return false;
-      }
-    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
