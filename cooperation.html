@@ -11,7 +11,6 @@
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
-            line-height: 1.6;
         }
         .navbar {
             background-color: #fff;
@@ -23,22 +22,31 @@
             font-weight: bold;
         }
         .hero {
-            height: 50vh;
+            height: 70vh;
             background: url('images/image5.jpg') no-repeat center center;
             background-size: cover;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
             text-align: center;
+            color: white;
+            position: relative;
+        }
+        .hero .content {
+            background: rgba(255, 255, 255, 0.8);
             padding: 20px;
+            border-radius: 10px;
+            max-width: 80%;
         }
         .hero h1 {
             font-size: 2.5rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            font-weight: bold;
+            margin: 0;
+            color: #333;
         }
         .section {
             padding: 50px 20px;
+            text-align: center;
         }
         .section h2 {
             font-size: 1.8rem;
@@ -54,7 +62,9 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="index.html">Air Pro</a>
+        <a class="navbar-brand" href="index.html">
+            <img src="images/IconOnly.png" alt="Air Pro - logo" class="icon-logo">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -70,7 +80,9 @@
 
     <!-- Hero Section -->
     <div class="hero">
-        <h1>Jak przebiega współpraca z nami?</h1>
+        <div class="content">
+            <h1>Jak przebiega współpraca z nami?</h1>
+        </div>
     </div>
 
     <!-- Cooperation Section -->
