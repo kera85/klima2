@@ -3,59 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jak przebiega współpraca z nami? | Air Pro</title>
-    <meta name="description" content="Dowiedz się, jak przebiega współpraca z Air Pro - od konsultacji po serwis. Profesjonalny montaż klimatyzacji w Warszawie i okolicach.">
+    <title>O Air Pro - Eksperci od Klimatyzacji i Ogrzewania w Warszawie</title>
+    <meta name="description" content="Poznaj zespół Air Pro - ekspertów w dziedzinie klimatyzacji i ogrzewania. Oferujemy nowoczesne rozwiązania dla domów i biur w Warszawie.">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16683705031"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-16683705031');
+    </script>
+
     <style>
+        :root {
+            --navbar-height: 10vh;
+            --icon-logo-height: 10vh;
+            --text-logo-height: 24vh;
+            --hero-font-size: 3vw;
+            --hero-paragraph-font-size: 2vw;
+            --navbar-padding-horizontal: 10vw;
+            --navbar-border-radius: 10px;
+            --navbar-margin-top: 20px;
+        }
+
         body {
             font-family: 'Roboto', sans-serif;
+            font-size: 1.1rem;
             margin: 0;
         }
+
         .navbar {
-            background-color: #fff;
+            background-color: #ffffff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 10px 20px;
+            padding: 10px var(--navbar-padding-horizontal);
+            position: fixed;
+            width: calc(100% - 2 * var(--navbar-padding-horizontal));
+            top: var(--navbar-margin-top);
+            left: var(--navbar-padding-horizontal);
+            z-index: 1000;
+            height: var(--navbar-height);
+            overflow: hidden;
+            border-radius: var(--navbar-border-radius);
+        }
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+        .navbar-brand .icon-only {
+            height: var(--icon-logo-height);
+            margin-right: 10px;
+        }
+        .navbar-brand .logo-container {
+            height: var(--text-logo-height);
+            overflow: hidden;
+        }
+        .navbar-brand .text-only {
+            height: 100%;
+            width: auto;
+        }
+        .navbar-nav {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
         }
         .navbar-nav .nav-link {
             color: #333 !important;
             font-weight: bold;
+            padding: 10px;
         }
+        .navbar-nav .nav-link.active {
+            color: #007bff !important;
+        }
+
         .hero {
-            height: 70vh;
+            position: relative;
+            width: 100%;
+            height: 100vh;
             background: url('images/image5.jpg') no-repeat center center;
             background-size: cover;
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            position: relative;
+            justify-content: flex-start;
+            text-align: left;
+            color: black;
+            padding-left: 10%;
         }
+
         .hero .content {
-            background: rgba(255, 255, 255, 0.8);
+            max-width: 950px;
+            background: rgba(255, 255, 255, 0.7);
             padding: 20px;
             border-radius: 10px;
-            max-width: 80%;
         }
+
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: var(--hero-font-size);
             font-weight: bold;
-            margin: 0;
-            color: #333;
+            margin-bottom: 20px;
         }
-        .section {
-            padding: 50px 20px;
-            text-align: center;
-        }
-        .section h2 {
-            font-size: 1.8rem;
+
+        .hero h3 {
+            font-size: var(--hero-paragraph-font-size);
+            font-weight: bold;
             margin-bottom: 20px;
             color: #007bff;
         }
-        .section p {
-            font-size: 1.1rem;
+
+        .hero p {
+            font-size: 1.3rem;
             margin-bottom: 20px;
+            color: black;
+        }
+
+        .hero .btn {
+            font-size: 1.3rem;
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --navbar-padding-horizontal: 5vw;
+                --navbar-height: 15vh;
+                --icon-logo-height: 10vh;
+                --text-logo-height: 10vh;
+                --text-logo-width-mobile: 50vw;
+                --navbar-margin-top: 0;
+                --hero-font-size-mobile: 7vw;
+                --hero-paragraph-font-size-mobile: 5vw;
+                --hero-p-font-size-mobile: 4vw;
+            }
+
+            .navbar {
+                width: 100%;
+                padding-left: var(--navbar-padding-horizontal);
+                padding-right: var(--navbar-padding-horizontal);
+                left: 0;
+                top: 0;
+                border-radius: 0;
+                height: auto;
+                display: block;
+                text-align: center;
+            }
+
+            .navbar-brand {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 10px;
+            }
+
+            .navbar-brand .logo-container {
+                height: var(--text-logo-height);
+                width: var(--text-logo-width-mobile);
+                display: flex;
+                align-items: center;
+            }
+
+            .navbar-brand .text-only {
+                height: auto;
+                width: 100%;
+            }
+
+            .navbar-nav {
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                margin: 0 auto;
+            }
+
+            .navbar-nav .nav-item {
+                flex: none;
+                text-align: center;
+            }
+
+            .hero {
+                justify-content: center;
+                padding-left: 0;
+                text-align: center;
+            }
+
+            .hero .content {
+                padding: 10px;
+                max-width: 90%;
+            }
+
+            .hero h1 {
+                font-size: var(--hero-font-size-mobile);
+            }
+
+            .hero h3 {
+                font-size: var(--hero-paragraph-font-size-mobile);
+            }
+
+            .hero p {
+                font-size: var(--hero-p-font-size-mobile);
+            }
+
+            .hero .btn {
+                font-size: 3vw;
+            }
         }
     </style>
 </head>
@@ -63,16 +212,16 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="index.html">
-            <img src="images/IconOnly.png" alt="Air Pro - logo" class="icon-logo">
+            <img src="images/IconOnly.png" alt="Air Pro - logo ikonowe montaż klimatyzacji Warszawa" class="icon-only">
+            <div class="logo-container">
+                <img src="images/TextOnly.png" alt="Air Pro - tekstowe logo montaż klimatyzacji Warszawa" class="text-only">
+            </div>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse show" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a class="nav-link" href="index.html">Strona główna</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">O nas</a></li>
-                <li class="nav-item"><a class="nav-link active" href="cooperation.html">Współpraca</a></li>
+                <li class="nav-item"><a class="nav-link" href="cooperation.html">Współpraca</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt</a></li>
             </ul>
         </div>
@@ -81,23 +230,14 @@
     <!-- Hero Section -->
     <div class="hero">
         <div class="content">
-            <h1>Jak przebiega współpraca z nami?</h1>
+            <h1>Air Pro - Twoi Eksperci od Klimatyzacji</h1>
+            <h3>Jak przebiega współpraca z nami?</h3>
+            <p><strong>Konsultacja:</strong> Bezpłatnie dokonujemy oględzin miejsca montażu, doradzamy i odpowiadamy na wszystkie pytania.</p>
+            <p><strong>Dobór urządzenia:</strong> Na podstawie analizy potrzeb klienta proponujemy optymalne rozwiązania.</p>
+            <p><strong>Montaż:</strong> Nasi specjaliści przeprowadzają instalację sprawnie i bezinwazyjnie, dbając o porządek w miejscu pracy.</p>
+            <p><strong>Serwis i wsparcie:</strong> Zapewniamy regularne przeglądy, konserwację oraz szybkie reakcje w przypadku ewentualnych usterek.</p>
+            <a href="contact.html" class="btn btn-primary">Skontaktuj się z nami</a>
         </div>
-    </div>
-
-    <!-- Cooperation Section -->
-    <div class="section">
-        <h2>Konsultacja</h2>
-        <p>Bezpłatnie dokonujemy oględzin miejsca montażu, doradzamy i odpowiadamy na wszystkie pytania.</p>
-        
-        <h2>Dobór urządzenia</h2>
-        <p>Na podstawie analizy potrzeb klienta proponujemy optymalne rozwiązania.</p>
-        
-        <h2>Montaż</h2>
-        <p>Nasi specjaliści przeprowadzają instalację sprawnie i bezinwazyjnie, dbając o porządek w miejscu pracy.</p>
-        
-        <h2>Serwis i wsparcie</h2>
-        <p>Zapewniamy regularne przeglądy, konserwację oraz szybkie reakcje w przypadku ewentualnych usterek.</p>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
