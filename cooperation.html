@@ -224,6 +224,20 @@
     .call-link:hover {
         text-decoration: underline;
     }
+        @media (max-width: 768px) {
+    .navbar-collapse {
+        max-height: 65vh;  /* Maksymalna wysokość na 65% ekranu */
+        overflow-y: auto;  /* Włącz przewijanie w pionie */
+    }
+
+    .nav-link {
+        padding: 15px;  /* Zmniejszenie paddingu */
+    }
+
+    .nav-item {
+        margin: 5px 0;  /* Zmniejszenie odstępów między zakładkami */
+    }
+}
     </style>
 </head>
 <body>
