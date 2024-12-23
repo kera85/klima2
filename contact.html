@@ -275,16 +275,21 @@
     .hero {
         padding-top: 10vh;  /* Mniejszy odstęp na telefonach */
         
- @keyframes blink {
-        0% { opacity: 1; }
-        50% { opacity: 0.5; }
-        100% { opacity: 1; }
-    }
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
 
-    .call-link {
-        text-decoration: none;
-        animation: blink 1.5s infinite;
-    }
+.call-link {
+    display: inline-block;
+    color: #007bff !important;
+    text-decoration: none;
+    font-size: 1,5rem;
+    font-weight: bold;
+    animation: blink 1.5s infinite ease-in-out; /* 3s na pełny cykl, smooth */
+}
+
 
     .call-link:hover {
         text-decoration: underline;
