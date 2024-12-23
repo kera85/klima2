@@ -257,16 +257,21 @@
 }
 }
         
- @keyframes blink {
-        0% { opacity: 1; }
-        50% { opacity: 0.5; }
-        100% { opacity: 1; }
-    }
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
 
-    .call-link {
-        text-decoration: none;
-        animation: blink 1.5s infinite;
-    }
+.call-link {
+    display: inline-block;
+    color: #007bff !important;
+    text-decoration: none;
+    font-size: 1,5rem;
+    font-weight: bold;
+    animation: blink 1.5s infinite ease-in-out; /* 3s na pełny cykl, smooth */
+}
+
 
     .call-link:hover {
         text-decoration: underline;
@@ -284,6 +289,7 @@
     .nav-item {
         margin: 5px 0;  /* Zmniejszenie odstępów między zakładkami */
     }
+
 }
     </style>
 </head>
@@ -307,13 +313,14 @@
             <li class="nav-item"><a class="nav-link" href="about.html">O nas</a></li>
             <li class="nav-item"><a class="nav-link" href="cooperation.html">Realizacja</a></li>
             <li class="nav-item text-center">
-                <a class="nav-link call-link" href="tel:+48123456789" style="color: #007bff !important;">
+                <a class="call-link" href="tel:+48123456789" style="color: #007bff!important;">
                     <span><strong>Zadzwoń</strong><br>+48 123 456 789</span>
                 </a>
             </li>
         </ul>
     </div>
 </nav>
+
 
 
     <!-- Hero Section -->
