@@ -238,12 +238,10 @@
         justify-content: center;
     }
 }
-}
-}
         
 @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+    0%, 100% { visibility: visible; }
+    50% { visibility: hidden; }
 }
 
 .call-link {
@@ -272,7 +270,7 @@
     .nav-item {
         margin: 5px 0;  /* Zmniejszenie odstępów między zakładkami */
     }
-            .navbar-nav .nav-item .call-link {
+       .call-link {
     animation: blink 1.5s infinite;
 }
 
