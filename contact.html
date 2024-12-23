@@ -34,7 +34,7 @@
     }
     </script>
 
-    <style>
+     <style>
         :root {
             --navbar-height: 10vh;
             --icon-logo-height: 10vh;
@@ -101,21 +101,19 @@
         .hero {
             position: relative;
             width: 100%;
-            min-height: 100vh;
-            background: url('images/image4.png') no-repeat center center;
+            height: 100vh;
+            background: url('images/image5.jpg') no-repeat center center;
             background-size: cover;
             display: flex;
             align-items: center;
             justify-content: flex-start;
             text-align: left;
             color: black;
-            padding-top: calc(var(--navbar-height) + var(--navbar-margin-top) + 20px);
-            padding-bottom: 20px;
             padding-left: 10%;
         }
 
         .hero .content {
-            max-width: 600px;
+            max-width: 950px;
             background: rgba(255, 255, 255, 0.7);
             padding: 20px;
             border-radius: 10px;
@@ -147,9 +145,9 @@
         @media (max-width: 768px) {
             :root {
                 --navbar-padding-horizontal: 5vw;
-                --navbar-height: 15vh;
-                --icon-logo-height: 10vh;
-                --text-logo-height: 10vh;
+                --navbar-height: 5vh;
+                --icon-logo-height: 5vh;
+                --text-logo-height: 5vh;
                 --text-logo-width-mobile: 50vw;
                 --navbar-margin-top: 0;
                 --hero-font-size-mobile: 7vw;
@@ -157,7 +155,7 @@
                 --hero-p-font-size-mobile: 4vw;
             }
 
-          .navbar {
+           .navbar {
     width: 100%;
     padding: 10px;
                 left: 0;
@@ -201,9 +199,8 @@
 
             .hero {
                 justify-content: center;
-                padding-left: 5%;
+                padding-left: 0;
                 text-align: center;
-                padding-top: calc(var(--navbar-height) + 20px);
             }
 
             .hero .content {
@@ -226,7 +223,38 @@
             .hero .btn {
                 font-size: 3vw;
             }
-             }
+        }
+      @media (max-width: 768px) {
+    .navbar {
+        height: auto;
+        padding: 5px 10px;
+    }
+
+    .navbar-brand .icon-only {
+        height: 4vh;
+    }
+
+    .navbar-brand .logo-container {
+        height: 4vh;
+        width: 40vw;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    .nav-item {
+        margin: 0;
+    }
+
+    .collapse.show {
+        display: flex;
+        justify-content: center;
+    }
+}
+}
+}
         
  @keyframes blink {
         0% { opacity: 1; }
@@ -244,12 +272,12 @@
     }
         @media (max-width: 768px) {
     .navbar-collapse {
-        max-height: 65vh;  /* Maksymalna wysokość na 65% ekranu */
-        overflow-y: auto;  /* Włącz przewijanie w pionie */
+      max-height: 65vh;
+    overflow-y: auto;  /* Włącz przewijanie w pionie */
     }
 
     .nav-link {
-       padding: 15px;  /* Zmniejszenie paddingu */
+        padding: 15px;  /* Zmniejszenie paddingu */
     }
 
     .nav-item {
@@ -261,23 +289,22 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="index.html">
-            <img src="images/IconOnly.png" alt="Air Pro - logo ikonowe montaż klimatyzacji Warszawa" class="icon-only">
-            <div class="logo-container">
-                <img src="images/TextOnly.png" alt="Air Pro - tekstowe logo montaż klimatyzacji Warszawa" class="text-only">
-            </div>
-        </a>
-        <!-- Przycisk hamburgera -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <a class="navbar-brand" href="index.html">
+        <img src="images/IconOnly.png" alt="Air Pro - logo ikonowe montaż klimatyzacji Warszawa" class="icon-only">
+        <div class="logo-container">
+            <img src="images/TextOnly.png" alt="Air Pro - tekstowe logo montaż klimatyzacji Warszawa" class="text-only">
+        </div>
+    </a>
+    
+  <div class="collapse navbar-collapse show" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Strona główna</a></li>
+            <li class="nav-item">
+    <a class="nav-link" href="index.html">
+        Strona<br>główna
+    </a>
+</li>
             <li class="nav-item"><a class="nav-link" href="about.html">O nas</a></li>
             <li class="nav-item"><a class="nav-link" href="cooperation.html">Realizacja</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt</a></li>
             <li class="nav-item text-center">
                 <a class="nav-link call-link" href="tel:+48123456789" style="color: #007bff !important;">
                     <span><strong>Zadzwoń</strong><br>+48 123 456 789</span>
@@ -286,6 +313,7 @@
         </ul>
     </div>
 </nav>
+
 
     <!-- Hero Section -->
     <div class="hero">
