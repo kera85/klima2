@@ -156,6 +156,22 @@
                 --hero-paragraph-font-size-mobile: 5vw;
                 --hero-p-font-size-mobile: 4vw;
             }
+                .hero {
+    min-height: 70vh; /* Dostosowanie wysokości dla telefonów */
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 60vh;
+        padding: 20px;
+        background-size: cover; /* Lepiej dostosowuje obraz tła */
+    }
+
+    .hero .content {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
 
            .navbar {
     width: 100%;
