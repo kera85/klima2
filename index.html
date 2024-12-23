@@ -65,16 +65,19 @@
             height: 100%;
             width: auto;
         }
-        .navbar-nav {
+       .navbar-nav {
             margin-left: auto;
-            display: flex;
-            align-items: center;
-        }
+    margin-right: auto; /* Aby rozdzielić elementy równomiernie */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Rozdziel elementy na boki */
+    width: 100%; /* Upewnij się, że zajmuje całą szerokość nawigacji */
+}
         .navbar-nav .nav-link {
-            color: #333 !important;
-            font-weight: bold;
-            padding: 10px;
-        }
+    color: #333 !important;
+    font-weight: bold;
+    padding: 20px 30px; /* Dodatkowe wcięcia */
+}
         .navbar-nav .nav-link.active {
             color: #007bff !important;
         }
