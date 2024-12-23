@@ -208,6 +208,21 @@
             .hero .btn {
                 font-size: 3vw;
             }
+             }
+        
+ @keyframes blink {
+        0% { opacity: 1; }
+        50% { opacity: 0.5; }
+        100% { opacity: 1; }
+    }
+
+    .call-link {
+        text-decoration: none;
+        animation: blink 1.5s infinite;
+    }
+
+    .call-link:hover {
+        text-decoration: underline;
         }
     </style>
 </head>
