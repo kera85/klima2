@@ -208,24 +208,24 @@
                 font-size: 3vw;
             }
         }
-        @media (max-width: 768px) {
+       @media (max-width: 768px) {
     .navbar {
         height: auto;
-        padding: 5px 10px;
+        padding: 3px 8px;  /* Minimalnie zmniejszony padding */
     }
 
     .navbar-brand .icon-only {
-        height: 4vh;
+        height: 3.5vh;  /* Minimalnie mniejsze logo */
     }
 
     .navbar-brand .logo-container {
-        height: 4vh;
-        width: 40vw;
+        height: 3.5vh;  /* Proporcjonalnie zmniejszone logo tekstowe */
+        width: 35vw;  /* Węższe logo */
     }
 
     .navbar-nav .nav-link {
-        padding: 10px 15px;
-        font-size: 0.9rem;
+        padding: 8px 12px;  /* Mniejsze odstępy między linkami */
+        font-size: 0.85rem;  /* Delikatnie mniejsza czcionka */
     }
 
     .nav-item {
@@ -236,6 +236,7 @@
         display: flex;
         justify-content: center;
     }
+}
 }
         
  @keyframes blink {
