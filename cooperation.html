@@ -206,7 +206,7 @@
                 font-size: 3vw;
             }
         }
-        <style>
+        
     .call-link {
         color: #007bff;  /* Niebieski kolor */
         text-decoration: none;
@@ -214,7 +214,16 @@
     .call-link:hover {
         text-decoration: underline;
     }
-</style>
+
+    @keyframes blink {
+        0% { opacity: 1; }
+        50% { opacity: 0.5; }
+        100% { opacity: 1; }
+    }
+
+    .call-link strong {
+        animation: blink 1.5s infinite;
+    }
     </style>
 </head>
 <body>
