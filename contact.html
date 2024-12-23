@@ -144,12 +144,12 @@
             font-size: 1.3rem;
         }
 
-        @media (max-width: 768px) {
+            @media (max-width: 768px) {
             :root {
                 --navbar-padding-horizontal: 5vw;
-                --navbar-height: 15vh;
-                --icon-logo-height: 10vh;
-                --text-logo-height: 10vh;
+                --navbar-height: 5vh;
+                --icon-logo-height: 5vh;
+                --text-logo-height: 5vh;
                 --text-logo-width-mobile: 50vw;
                 --navbar-margin-top: 0;
                 --hero-font-size-mobile: 7vw;
@@ -157,10 +157,9 @@
                 --hero-p-font-size-mobile: 4vw;
             }
 
-            .navbar {
-                width: 100%;
-                padding-left: var(--navbar-padding-horizontal);
-                padding-right: var(--navbar-padding-horizontal);
+           .navbar {
+    width: 100%;
+    padding: 10px;
                 left: 0;
                 top: 0;
                 border-radius: 0;
@@ -202,9 +201,8 @@
 
             .hero {
                 justify-content: center;
-                padding-left: 5%;
+                padding-left: 0;
                 text-align: center;
-                padding-top: calc(var(--navbar-height) + 20px);
             }
 
             .hero .content {
@@ -227,7 +225,36 @@
             .hero .btn {
                 font-size: 3vw;
             }
-             }
+        }
+      @media (max-width: 768px) {
+    .navbar {
+        height: auto;
+        padding: 5px 10px;
+    }
+
+    .navbar-brand .icon-only {
+        height: 4vh;
+    }
+
+    .navbar-brand .logo-container {
+        height: 4vh;
+        width: 40vw;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+
+    .nav-item {
+        margin: 0;
+    }
+
+    .collapse.show {
+        display: flex;
+        justify-content: center;
+    }
+}
         
  @keyframes blink {
         0% { opacity: 1; }
