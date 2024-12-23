@@ -52,7 +52,7 @@
             margin: 0;
         }
 
-      .navbar {
+        .navbar {
             background-color: #ffffff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 10px var(--navbar-padding-horizontal);
@@ -81,12 +81,13 @@
             height: 100%;
             width: auto;
         }
-       .navbar-nav {
+        .navbar-nav {
+            margin-left: auto;
+    margin-right: auto; /* Aby rozdzielić elementy równomiernie */
     display: flex;
     align-items: center;
-    justify-content: center; /* Elementy bliżej siebie */
-    width: auto; /* Usuń rozciąganie na całą szerokość */
-           gap: 10px;
+    justify-content: space-between; /* Rozdziel elementy na boki */
+    width: 100%; /* Upewnij się, że zajmuje całą szerokość nawigacji */
 }
         .navbar-nav .nav-link {
     color: #333 !important;
@@ -143,33 +144,18 @@
             font-size: 1.3rem;
         }
 
-      @media (max-width: 768px) {
-    :root {
-        --navbar-padding-horizontal: 5vw;
-        --navbar-height: 5vh;
-        --icon-logo-height: 5vh;
-        --text-logo-height: 5vh;
-        --text-logo-width-mobile: 50vw;
-        --navbar-margin-top: 0;
-        --hero-font-size-mobile: 7vw;
-        --hero-paragraph-font-size-mobile: 5vw;
-        --hero-p-font-size-mobile: 4vw;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        height: auto;
-        padding: 5px 10px;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar-collapse {
-        max-height: 65vh;
-        overflow-y: auto;  /* Włącz przewijanie w pionie */
-    }
-}
+        @media (max-width: 768px) {
+            :root {
+                --navbar-padding-horizontal: 5vw;
+                --navbar-height: 15vh;
+                --icon-logo-height: 10vh;
+                --text-logo-height: 10vh;
+                --text-logo-width-mobile: 50vw;
+                --navbar-margin-top: 0;
+                --hero-font-size-mobile: 7vw;
+                --hero-paragraph-font-size-mobile: 5vw;
+                --hero-p-font-size-mobile: 4vw;
+            }
 
             .navbar {
                 width: 100%;
@@ -258,25 +244,22 @@
         text-decoration: underline;
     }
     </style>
+        }
+    </style>
 </head>
 <body>
-   <!-- Navbar -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="index.html">
-        <img src="images/IconOnly.png" alt="Air Pro - logo ikonowe montaż klimatyzacji Warszawa" class="icon-only">
-        <div class="logo-container">
-            <img src="images/TextOnly.png" alt="Air Pro - tekstowe logo montaż klimatyzacji Warszawa" class="text-only">
-        </div>
-    </a>
-    
-  <div class="collapse navbar-collapse show" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-    <a class="nav-link" href="index.html">
-        Strona<br>główna
-    </a>
-</li>
-            <li class="nav-item"><a class="nav-link" href="about.html">O nas</a></li>
+        <a class="navbar-brand" href="index.html">
+            <img src="images/IconOnly.png" alt="Air Pro - logo ikonowe montaż klimatyzacji Warszawa" class="icon-only">
+            <div class="logo-container">
+                <img src="images/TextOnly.png" alt="Air Pro - tekstowe logo montaż klimatyzacji Warszawa" class="text-only">
+            </div>
+        </a>
+        <div class="collapse navbar-collapse show" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Strona główna</a></li>
+                  <li class="nav-item"><a class="nav-link" href="about.html">O nas</a></li>
             <li class="nav-item"><a class="nav-link" href="cooperation.html">Realizacja</a></li>
             <li class="nav-item text-center">
                 <a class="call-link" href="tel:+48123456789" style="color: #007bff!important;">
@@ -286,7 +269,6 @@
         </ul>
     </div>
 </nav>
-
 
     <!-- Hero Section -->
     <div class="hero">
