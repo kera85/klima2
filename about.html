@@ -2,26 +2,13 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Air Pro - Eksperci od Klimatyzacji i Ogrzewania w Warszawie</title>
-    <meta name="description" content="Poznaj zespół Air Pro - ekspertów w dziedzinie klimatyzacji i ogrzewania. Oferujemy nowoczesne rozwiązania dla domów i biur w Warszawie.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>O Air Pro - Klimatyzacja i Ogrzewanie w Warszawie</title>
+    <meta name="description" content="Poznaj Air Pro - ekspertów od klimatyzacji i ogrzewania w Warszawie. Profesjonalizm i niezawodność to nasza wizytówka.">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
-   
 
-<style>
-        :root {
-            --navbar-height: 10vh;
-            --icon-logo-height: 10vh;
-            --text-logo-height: 24vh;
-            --hero-font-size: 3vw;
-            --hero-paragraph-font-size: 2vw;
-            --navbar-padding-horizontal: 10vw;
-            --navbar-border-radius: 10px;
-            --navbar-margin-top: 20px;
-        }
-
+    <style>
         body {
             font-family: 'Roboto', sans-serif;
             font-size: 1.1rem;
@@ -30,282 +17,84 @@
 
         .navbar {
             background-color: #ffffff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 10px var(--navbar-padding-horizontal);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 10px 10vw;
+            width: 100%;
             position: fixed;
-            width: calc(100% - 2 * var(--navbar-padding-horizontal));
-            top: var(--navbar-margin-top);
-            left: var(--navbar-padding-horizontal);
+            top: 0;
+            left: 0;
             z-index: 1000;
-            height: var(--navbar-height);
-            overflow: hidden;
-            border-radius: var(--navbar-border-radius);
-        }
-        .navbar-brand {
-            display: flex;
-            align-items: center;
-        }
-        .navbar-brand .icon-only {
-            height: var(--icon-logo-height);
-            margin-right: 10px;
-        }
-        .navbar-brand .logo-container {
-            height: var(--text-logo-height);
-            overflow: hidden;
-        }
-        .navbar-brand .text-only {
-            height: 100%;
-            width: auto;
-        }
-       .navbar-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Elementy bliżej siebie */
-    width: auto; /* Usuń rozciąganie na całą szerokość */
-           gap: 10px;
-}
-        .navbar-nav .nav-link {
-    color: #333 !important;
-    font-weight: bold;
-    padding: 20px 30px; /* Dodatkowe wcięcia */
-}
-        .navbar-nav .nav-link.active {
-            color: #007bff !important;
         }
 
         .hero {
-            position: relative;
-            width: 100%;
             height: 100vh;
             background: url('images/image2.png') no-repeat center center;
             background-size: cover;
             display: flex;
             align-items: center;
-            justify-content: flex-start;
             text-align: left;
-            color: black;
             padding-left: 10%;
+            padding-top: 15vh;
         }
 
         .hero .content {
-            max-width: 950px;
-            background: rgba(255, 255, 255, 0.7);
-            padding: 20px;
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 30px;
             border-radius: 10px;
         }
 
-        .hero h1 {
-            font-size: var(--hero-font-size);
+        .navbar-nav .nav-link {
             font-weight: bold;
-            margin-bottom: 20px;
+            color: #333 !important;
+            padding: 15px;
         }
 
-        .hero h3 {
-            font-size: var(--hero-paragraph-font-size);
+        .call-link {
+            font-size: 1.5rem;
             font-weight: bold;
-            margin-bottom: 20px;
-            color: #007bff;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            color: black;
-        }
-
-        .hero .btn {
-            font-size: 1.3rem;
+            color: #007bff !important;
         }
 
         @media (max-width: 768px) {
-            :root {
-                --navbar-padding-horizontal: 5vw;
-                --navbar-height: 5vh;
-                --icon-logo-height: 5vh;
-                --text-logo-height: 5vh;
-                --text-logo-width-mobile: 50vw;
-                --navbar-margin-top: 0;
-                --hero-font-size-mobile: 7vw;
-                --hero-paragraph-font-size-mobile: 5vw;
-                --hero-p-font-size-mobile: 4vw;
-            }
-
-           .navbar {
-    width: 100%;
-    padding: 10px;
-                left: 0;
-                top: 0;
-                border-radius: 0;
-                height: auto;
-                display: block;
-                text-align: center;
-            }
-
-            .navbar-brand {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-bottom: 10px;
-            }
-
-            .navbar-brand .logo-container {
-                height: var(--text-logo-height);
-                width: var(--text-logo-width-mobile);
-                display: flex;
-                align-items: center;
-            }
-
-            .navbar-brand .text-only {
-                height: auto;
-                width: 100%;
-            }
-
-            .navbar-nav {
-                display: flex;
-                justify-content: center;
-                flex-direction: row;
-                margin: 0 auto;
-            }
-
-            .navbar-nav .nav-item {
-                flex: none;
-                text-align: center;
-            }
-
             .hero {
+                text-align: center;
                 justify-content: center;
                 padding-left: 0;
-                text-align: center;
             }
-
+            
             .hero .content {
-                padding: 10px;
                 max-width: 90%;
             }
 
-            .hero h1 {
-                font-size: var(--hero-font-size-mobile);
-            }
-
-            .hero h3 {
-                font-size: var(--hero-paragraph-font-size-mobile);
-            }
-
-            .hero p {
-                font-size: var(--hero-p-font-size-mobile);
-            }
-
-            .hero .btn {
-                font-size: 3vw;
+            .navbar {
+                padding: 10px 5vw;
             }
         }
-      @media (max-width: 768px) {
-    .navbar {
-        height: auto;
-        padding: 5px 10px;
-    }
-
-    .navbar-brand .icon-only {
-        height: 4vh;
-    }
-
-    .navbar-brand .logo-container {
-        height: 4vh;
-        width: 40vw;
-    }
-
-    .navbar-nav .nav-link {
-        padding: 5px 10px;
-        font-size: 0.89rem;
-    }
-
-    .nav-item {
-        margin: 0;
-    }
-
-    .collapse.show {
-        display: flex;
-        justify-content: center;
-    }
-}
-        
-@keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0.5; }
-    100% { opacity: 1; }
-}
-
-.call-link {
-    display: inline-block;
-    color: #007bff !important;
-    text-decoration: none;
-    font-size: 1,5rem;
-    font-weight: bold;
-    animation: blink 1.5s infinite ease-in-out; /* 3s na pełny cykl, smooth */
-}
-
-
-    .call-link:hover {
-        text-decoration: underline;
-    }
-        @media (max-width: 768px) {
-    .navbar-collapse {
-      max-height: 65vh;
-    overflow-y: auto;  /* Włącz przewijanie w pionie */
-    }
-
-    .nav-link {
-        padding: 15px;  /* Zmniejszenie paddingu */
-    }
-
-    .nav-item {
-        margin: 5px 0;  /* Zmniejszenie odstępów między zakładkami */
-    }
-
-}
     </style>
 </head>
 <body>
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="index.html">
-        <img src="images/IconOnly.png" alt="Air Pro - logo ikonowe montaż klimatyzacji Warszawa" class="icon-only">
-        <div class="logo-container">
-            <img src="images/TextOnly.png" alt="Air Pro - tekstowe logo montaż klimatyzacji Warszawa" class="text-only">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/IconOnly.png" alt="Logo Air Pro" class="icon-only">
+            <div class="logo-container">
+                <img src="images/TextOnly.png" alt="Air Pro - Klimatyzacja Warszawa" class="text-only">
+            </div>
+        </a>
+        <div class="collapse navbar-collapse show">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Strona główna</a></li>
+                <li class="nav-item"><a class="nav-link active" href="about.html">O nas</a></li>
+                <li class="nav-item"><a class="nav-link" href="cooperation.html">Realizacja</a></li>
+            </ul>
         </div>
-    </a>
-    
-  <div class="collapse navbar-collapse show" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-    <a class="nav-link" href="index.html">
-        Strona<br>główna
-    </a>
-</li>
-            <li class="nav-item"><a class="nav-link" href="about.html">O nas</a></li>
-            <li class="nav-item"><a class="nav-link" href="cooperation.html">Realizacja</a></li>
-            <li class="nav-item text-center">
-                <a class="call-link" href="tel:+48123456789" style="color: #007bff!important;">
-                    <span><strong>Zadzwoń</strong><br>+48 123 456 789</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-</nav>
+    </nav>
 
-    <!-- Hero Section -->
     <div class="hero">
         <div class="content">
-           
-            <h3><span>Dlaczego warto wybrać naszą firmę?
-
-</span></h3>
-           <p><strong>Doświadczenie i profesjonalizm:</strong> Wykwalifikowani specjaliści z wieloletnim doświadczeniem.</p>
-<p><strong>Wysoka jakość:</strong> Trwałe i niezawodne instalacje dzięki współpracy z renomowanymi producentami.</p>
-<p><strong>Terminowość:</strong> Gwarantujemy szybkie i sprawne realizacje.</p>
-<p><strong>Atrakcyjne gwarancje:</strong> Korzystne warunki na sprzęt i usługi.</p>
-<p><strong>Wsparcie posprzedażowe:</strong> Kompleksowy serwis.</p>
-
+            <h1>Poznaj naszą firmę</h1>
+            <p>Air Pro to zespół profesjonalistów zajmujących się montażem klimatyzacji i systemów grzewczych. Działamy na terenie Warszawy i okolic, oferując najwyższą jakość usług.</p>
+            <p>Nasze doświadczenie oraz współpraca z renomowanymi producentami gwarantują niezawodność i satysfakcję klientów.</p>
             <a href="contact.html" class="btn btn-primary">Skontaktuj się z nami</a>
         </div>
     </div>
