@@ -3,21 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt i Montaż Klimatyzacji w Legionowie | Air Pro</title>
-<meta name="description" content="Skontaktuj się z Air Pro – liderem w montażu klimatyzacji w Legionowie. Profesjonalne doradztwo i szybki montaż. Zadzwoń lub napisz, by uzyskać ofertę dostosowaną do Twoich potrzeb.">
- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Kontakt - Montaż Klimatyzacji Warszawa | Air Pro</title>
+    <meta name="description" content="Skontaktuj się z Air Pro, specjalistami od montażu klimatyzacji w Warszawie i okolicach. Uzyskaj fachową poradę i najlepsze rozwiązania.">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Event snippet for Kontakt conversion page -->
+<script>
+  gtag('event', 'conversion', {'send_to': 'AW-16683705031/tgLzCJfKwPsZEMfFtJM-'});
+</script>
+
     
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16683705031"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'AW-16683705031');
-    </script>
-
     <!-- Conversion tracking script -->
     <script>
     function gtag_report_conversion(url) {
@@ -300,9 +296,9 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="index.html">
-            <img src="images/IconOnly.png" alt="Air Pro - logo ikonowe montaż klimatyzacji Legionowo" class="icon-only">
+            <img src="images/IconOnly.png" alt="Air Pro - logo ikonowe montaż klimatyzacji Warszawa" class="icon-only">
             <div class="logo-container">
-                <img src="images/TextOnly.png" alt="Air Pro - tekstowe logo montaż klimatyzacji Legionowo" class="text-only">
+                <img src="images/TextOnly.png" alt="Air Pro - tekstowe logo montaż klimatyzacji Warszawa" class="text-only">
             </div>
         </a>
           <div class="collapse navbar-collapse show" id="navbarNav">
@@ -324,13 +320,14 @@
     </div>
 </nav>
 
-       <!-- Hero Section -->
+    <!-- Hero Section -->
     <div class="hero">
         <div class="content">
-            <h3>Jesteśmy tu, aby pomóc Ci znaleźć najlepsze rozwiązanie.</h3>
+           
+            <h3><span>Jesteśmy tu, aby pomóc Ci znaleźć najlepsze rozwiązanie.</span></h3>
             <p>mail: <a href="mailto:klimatyzacja.airpro@gmail.com">klimatyzacja.airpro@gmail.com</a></p>
             <div class="contact-form">
-                <form id="contactForm" action="https://formspree.io/f/xeojqbwn" method="POST">
+                <form id="contactForm" action="https://formspree.io/f/xeojqbwn" method="POST" onsubmit="return gtag_report_conversion('https://formspree.io/thanks?language=en');">
                     <div class="form-group">
                         <input type="text" name="name" class="form-control" placeholder="Imię" required>
                     </div>
@@ -345,50 +342,16 @@
                     </div>
                     <div class="form-group form-check text-left">
                         <input type="checkbox" class="form-check-input" id="consentCheck" required>
-                        <label class="form-check-label" for="consentCheck">Wyrażam zgodę na kontakt.*</label>
+                        <label class="form-check-label" for="consentCheck">Wyrażam zgodę na otrzymywanie drogą elektroniczną na wskazany przeze mnie adres e-mail informacji dotyczących świadczonych przez Administratora usług. Zgoda może zostać cofnięta w każdym czasie.*</label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Wyślij wiadomość</button>
+                    <button type="submit" class="btn btn-primary" onclick="gtag('event', 'click', {'event_category': 'Button', 'event_label': 'Wyślij wiadomość'});">Wyślij wiadomość</button>
                 </form>
             </div>
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        document.getElementById("contactForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Zapobiega domyślnemu przesłaniu formularza
-            var form = this;
-            
-            gtag('event', 'conversion', {
-                'send_to': 'AW-16683705031/gTz_CP2WlM4ZEMfFtJM-',
-                'event_callback': function() {
-                    form.submit(); // Wysyła formularz po zgłoszeniu konwersji
-                }
-            });
-
-            setTimeout(function() {
-                form.submit(); // Zapewnia przesłanie formularza w przypadku problemu z gtag
-            }, 3000);
-        });
-
-        $(document).ready(function(){
-            $("#contactForm").submit(function(event){
-                event.preventDefault();
-                $.ajax({
-                    url: "https://formspree.io/f/xeojqbwn",
-                    method: "POST",
-                    data: $(this).serialize(),
-                    dataType: "json",
-                    success: function(response) {
-                        alert("Wiadomość wysłana pomyślnie!");
-                        $("#contactForm")[0].reset();
-                    },
-                    error: function() {
-                        alert("Błąd wysyłania wiadomości. Spróbuj ponownie.");
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
