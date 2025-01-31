@@ -3,21 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt - Montaż Klimatyzacji Legionowo | Air Pro</title>
-    <meta name="description" content="Skontaktuj się z Air Pro – liderem w montażu klimatyzacji w Legionowie. Profesjonalne doradztwo i szybki montaż. Zadzwoń lub napisz, by uzyskać ofertę dostosowaną do Twoich potrzeb.">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Kontakt i Montaż Klimatyzacji w Legionowie | Air Pro</title>
+<meta name="description" content="Skontaktuj się z Air Pro – liderem w montażu klimatyzacji w Legionowie. Profesjonalne doradztwo i szybki montaż. Zadzwoń lub napisz, by uzyskać ofertę dostosowaną do Twoich potrzeb.">
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16683705031"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+
       gtag('config', 'AW-16683705031');
     </script>
 
+    <!-- Conversion tracking script -->
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-16683705031/gTz_CP2WlM4ZEMfFtJM-',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+
     <style>
+        :root {
+            --navbar-height: 10vh;
+            --icon-logo-height: 10vh;
+            --text-logo-height: 24vh;
+            --hero-font-size: 3vw;
+            --hero-paragraph-font-size: 2vw;
+            --navbar-padding-horizontal: 10vw;
+            --navbar-border-radius: 10px;
+            --navbar-margin-top: 20px;
+        }
+
         body {
             font-family: 'Roboto', sans-serif;
             font-size: 1.1rem;
@@ -27,15 +55,51 @@
         .navbar {
             background-color: #ffffff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 10px 10vw;
+            padding: 10px var(--navbar-padding-horizontal);
             position: fixed;
-            width: 80%;
-            top: 20px;
-            left: 10vw;
+            width: calc(100% - 2 * var(--navbar-padding-horizontal));
+            top: var(--navbar-margin-top);
+            left: var(--navbar-padding-horizontal);
             z-index: 1000;
-            height: 10vh;
-            border-radius: 10px;
+            height: var(--navbar-height);
+            overflow: hidden;
+            border-radius: var(--navbar-border-radius);
         }
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+        .navbar-brand .icon-only {
+            height: var(--icon-logo-height);
+            margin-right: 10px;
+        }
+        .navbar-brand .logo-container {
+            height: var(--text-logo-height);
+            overflow: hidden;
+        }
+        .navbar-brand .text-only {
+            height: 100%;
+            width: auto;
+        }
+       .navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Elementy bliżej siebie */
+    width: auto; /* Usuń rozciąganie na całą szerokość */
+           gap: 10px;
+}
+        .navbar-nav .nav-link {
+    color: #333 !important;
+    font-weight: bold;
+    padding: 20px 30px; /* Dodatkowe wcięcia */
+}
+        .navbar-nav .nav-link.active {
+            color: #007bff !important;
+        }
+        .hero {
+    padding-top: 10vh;  /* Dodaj większy odstęp dla komputerów */
+}
+
 
         .hero {
             position: relative;
@@ -48,9 +112,16 @@
             justify-content: flex-start;
             text-align: left;
             color: black;
-            padding-top: 15vh;
+            padding-top: calc(var(--navbar-height) + var(--navbar-margin-top) + 20px);
+            padding-bottom: 20px;
             padding-left: 10%;
         }
+        .hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto; /* Dodaje przewijanie */
+}
 
         .hero .content {
             max-width: 600px;
@@ -58,27 +129,209 @@
             padding: 20px;
             border-radius: 10px;
         }
+
+        .hero h1 {
+            font-size: var(--hero-font-size);
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero h3 {
+            font-size: var(--hero-paragraph-font-size);
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .hero .btn {
+            font-size: 1.3rem;
+        }
+
+            @media (max-width: 768px) {
+            :root {
+                --navbar-padding-horizontal: 5vw;
+                --navbar-height: 5vh;
+                --icon-logo-height: 5vh;
+                --text-logo-height: 5vh;
+                --text-logo-width-mobile: 50vw;
+                --navbar-margin-top: 0;
+                --hero-font-size-mobile: 7vw;
+                --hero-paragraph-font-size-mobile: 5vw;
+                --hero-p-font-size-mobile: 4vw;
+            
+}
+
+           .navbar {
+    width: 100%;
+    padding: 10px;
+                left: 0;
+                top: 0;
+                border-radius: 0;
+                height: auto;
+                display: block;
+                text-align: center;
+            }
+
+            .navbar-brand {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 10px;
+            }
+
+            .navbar-brand .logo-container {
+                height: var(--text-logo-height);
+                width: var(--text-logo-width-mobile);
+                display: flex;
+                align-items: center;
+            }
+
+            .navbar-brand .text-only {
+                height: auto;
+                width: 100%;
+            }
+
+            .navbar-nav {
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                margin: 0 auto;
+            }
+
+            .navbar-nav .nav-item {
+                flex: none;
+                text-align: center;
+            }
+
+            .hero {
+                justify-content: center;
+                padding-left: 0;
+                text-align: center;
+            }
+
+            .hero .content {
+                padding: 10px;
+                max-width: 90%;
+            }
+
+            .hero h1 {
+                font-size: var(--hero-font-size-mobile);
+            }
+
+            .hero h3 {
+                font-size: var(--hero-paragraph-font-size-mobile);
+            }
+
+            .hero p {
+                font-size: var(--hero-p-font-size-mobile);
+            }
+
+            .hero .btn {
+                font-size: 3vw;
+            }
+        }
+        
+        .form-check-label {
+    font-size: 0.9rem;  /* Lub dowolna inna wartość */
+    line-height: 1.4;
+}
+        
+      @media (max-width: 768px) {
+    .navbar {
+        height: auto;
+        padding: 5px 10px;
+    }
+
+    .navbar-brand .icon-only {
+        height: 4vh;
+    }
+
+    .navbar-brand .logo-container {
+        height: 4vh;
+        width: 40vw;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 5px 10px;
+        font-size: 0.89rem;
+    }
+
+    .nav-item {
+        margin: 0;
+    }
+
+    .collapse.show {
+        display: flex;
+        justify-content: center;
+    }
+}
+        @media (max-width: 768px) {
+    .hero {
+        padding-top: 10vh;  /* Mniejszy odstęp na telefonach */
+        
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.call-link {
+    display: inline-block;
+    color: #007bff !important;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    animation: blink 1.5s infinite ease-in-out; /* 3s na pełny cykl, smooth */
+}
+
+
+    .call-link:hover {
+        text-decoration: underline;
+    }
     </style>
 </head>
 <body>
-
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="index.html">
-            <img src="images/IconOnly.png" alt="Air Pro - logo" class="icon-only">
+            <img src="images/IconOnly.png" alt="Air Pro - logo ikonowe montaż klimatyzacji Legionowo" class="icon-only">
             <div class="logo-container">
-                <img src="images/TextOnly.png" alt="Air Pro - tekstowe logo" class="text-only">
+                <img src="images/TextOnly.png" alt="Air Pro - tekstowe logo montaż klimatyzacji Legionowo" class="text-only">
             </div>
         </a>
-    </nav>
+          <div class="collapse navbar-collapse show" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+    <a class="nav-link" href="index.html">
+        Strona<br>główna
+    </a>
+</li>
+
+                  <li class="nav-item"><a class="nav-link" href="about.html">O nas</a></li>
+            <li class="nav-item"><a class="nav-link" href="cooperation.html">Realizacja</a></li>
+            <li class="nav-item text-center">
+                 <a class="call-link" href="tel:+48123456789" style="color: #007bff!important;">
+                    <span><strong>Zadzwoń</strong><br>+48 123 456 789</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
     <!-- Hero Section -->
     <div class="hero">
         <div class="content">
-            <h3>Jesteśmy tu, aby pomóc Ci znaleźć najlepsze rozwiązanie.</h3>
+           
+            <h3><span>Jesteśmy tu, aby pomóc Ci znaleźć najlepsze rozwiązanie.</span></h3>
             <p>mail: <a href="mailto:klimatyzacja.airpro@gmail.com">klimatyzacja.airpro@gmail.com</a></p>
             <div class="contact-form">
-                <form id="contactForm" action="https://formspree.io/f/xeojqbwn" method="POST">
+                <form id="contactForm" action="https://formspree.io/f/xeojqbwn" method="POST" onsubmit="return gtag_report_conversion('https://formspree.io/thanks?language=en');">
                     <div class="form-group">
                         <input type="text" name="name" class="form-control" placeholder="Imię" required>
                     </div>
@@ -91,58 +344,18 @@
                     <div class="form-group">
                         <textarea name="message" class="form-control" placeholder="Twoje zapytanie" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Wyślij wiadomość</button>
+                    <div class="form-group form-check text-left">
+                        <input type="checkbox" class="form-check-input" id="consentCheck" required>
+                        <label class="form-check-label" for="consentCheck">Wyrażam zgodę na otrzymywanie drogą elektroniczną na wskazany przeze mnie adres e-mail informacji dotyczących świadczonych przez Administratora usług. Zgoda może zostać cofnięta w każdym czasie.*</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary" onclick="gtag('event', 'click', {'event_category': 'Button', 'event_label': 'Wyślij wiadomość'});">Wyślij wiadomość</button>
                 </form>
             </div>
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("#contactForm").submit(function(event){
-                event.preventDefault(); // Zatrzymuje domyślne wysyłanie
-
-                var form = $(this);
-                var formData = form.serialize();
-
-                gtag('event', 'conversion', {
-                    'send_to': 'AW-16683705031/gTz_CP2WlM4ZEMfFtJM-',
-                    'event_callback': function() {
-                        $.ajax({
-                            url: "https://formspree.io/f/xeojqbwn",
-                            method: "POST",
-                            data: formData,
-                            dataType: "json",
-                            success: function(response) {
-                                alert("Wiadomość wysłana pomyślnie!");
-                                form[0].reset();
-                            },
-                            error: function() {
-                                alert("Błąd wysyłania wiadomości. Sprawdź poprawność adresu e-mail.");
-                            }
-                        });
-                    }
-                });
-
-                setTimeout(function() {
-                    $.ajax({
-                        url: "https://formspree.io/f/xeojqbwn",
-                        method: "POST",
-                        data: formData,
-                        dataType: "json",
-                        success: function(response) {
-                            alert("Wiadomość wysłana pomyślnie!");
-                            form[0].reset();
-                        },
-                        error: function() {
-                            alert("Błąd wysyłania wiadomości.");
-                        }
-                    });
-                }, 3000);
-            });
-        });
-    </script>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
